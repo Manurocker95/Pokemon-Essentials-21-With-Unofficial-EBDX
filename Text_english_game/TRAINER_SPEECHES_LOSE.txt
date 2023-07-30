@@ -1,0 +1,30 @@
+﻿# To localize this text for a particular language, please
+# translate every second line of this file.
+#-------------------------------
+[TRAINER_SPEECHES_LOSE]
+A very good battle, indeed!
+A very good battle, indeed!
+Very good.
+Very good.
+You're too good for me!
+You're too good for me!
+Aww, I lost.
+Aww, I lost.
+You beat me again!
+You beat me again!
+Defeated! Oh my!
+Defeated! Oh my!
+Washed out!
+Washed out!
+My Skitty!
+My Skitty!
+You didn't have to win so convincingly!
+You didn't have to win so convincingly!
+Our teamwork failed!
+Our teamwork failed!
+...
+...
+Not too shabby.
+Not too shabby.
+A good battle indeed!
+A good battle indeed!

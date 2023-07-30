@@ -1,0 +1,14 @@
+﻿# To localize this text for a particular language, please
+# translate every second line of this file.
+#-------------------------------
+[SCRIPT_TEXTS]
+Kanto Pokédex
+Kanto Pokédex
+Johto Pokédex
+Johto Pokédex
+My Game by:
+My Game by:
+Also involved were:
+Also involved were:
+Special thanks to:
+Special thanks to:

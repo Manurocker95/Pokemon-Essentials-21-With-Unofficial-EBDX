@@ -1,0 +1,86 @@
+﻿# To localize this text for a particular language, please
+# translate every second line of this file.
+#-------------------------------
+[PHONE_MESSAGES]
+Hello. This is \TN.
+Hello. This is \TN.
+Good day, \PN! Hi. This is \TN.
+Good day, \PN! Hi. This is \TN.
+How are you doing? \PN, howdy! This is \TN. Isn't it nice out?
+How are you doing? \PN, howdy! This is \TN. Isn't it nice out?
+\PN, good day! It's me, \TN. Got a minute?
+\PN, good day! It's me, \TN. Got a minute?
+Hello, \PN. This is \TN. How are things?
+Hello, \PN. This is \TN. How are things?
+Good morning, \PN. This is \TN. Did I wake you?
+Good morning, \PN. This is \TN. Did I wake you?
+Good afternoon, \PN! It's \TN here.
+Good afternoon, \PN! It's \TN here.
+\PN, good evening! Hi. This is \TN.
+\PN, good evening! Hi. This is \TN.
+How are your Pokémon doing?\mMy \TP's really energetic. It's a handful!\mOh yeah, I managed to beat a tough \TE.\mI need to make my party stronger.
+How are your Pokémon doing?\mMy \TP's really energetic. It's a handful!\mOh yeah, I managed to beat a tough \TE.\mI need to make my party stronger.
+My \TP's looking really awesome. I wish I could show you.\mHey, listen! I almost caught a \TE the other day.\mOh, it was sooooooo close, too!
+My \TP's looking really awesome. I wish I could show you.\mHey, listen! I almost caught a \TE the other day.\mOh, it was sooooooo close, too!
+How are your Pokémon doing?\mMy \TP's really energetic. It's a handful!
+How are your Pokémon doing?\mMy \TP's really energetic. It's a handful!
+How are your Pokémon doing?\mI always keep my \TP in top shape by going to Pokémon Centers.
+How are your Pokémon doing?\mI always keep my \TP in top shape by going to Pokémon Centers.
+My \TP's looking really awesome. I wish I could show you.
+My \TP's looking really awesome. I wish I could show you.
+I dressed my \TP and it looks even cuter than before.
+I dressed my \TP and it looks even cuter than before.
+Oh yeah, I managed to beat a tough \TE.\mI need to make my party stronger.
+Oh yeah, I managed to beat a tough \TE.\mI need to make my party stronger.
+You have to hear this! I battled \TE the other day.\mIt was easy! I had a type advantage.
+You have to hear this! I battled \TE the other day.\mIt was easy! I had a type advantage.
+Hey, listen! I almost caught \TE the other day.\mOh, it was sooooooo close, too!
+Hey, listen! I almost caught \TE the other day.\mOh, it was sooooooo close, too!
+Guess what happened the other day. I missed catching \TE again.\mMaybe I'm not very good at this.
+Guess what happened the other day. I missed catching \TE again.\mMaybe I'm not very good at this.
+Want to battle? It's not going to be a repeat of the last time we met.\mI'll be waiting for you around \TM.
+Want to battle? It's not going to be a repeat of the last time we met.\mI'll be waiting for you around \TM.
+Do you want to battle? I'm going to win this time!\mI'll be waiting for you around \TM.\mLook for me, OK? My \TP will be expecting you.
+Do you want to battle? I'm going to win this time!\mI'll be waiting for you around \TM.\mLook for me, OK? My \TP will be expecting you.
+Hello. This is \TN...\mHow's it going, \PN?
+Hello. This is \TN...\mHow's it going, \PN?
+My \TP is looking more and more like me. It's getting cuter!
+My \TP is looking more and more like me. It's getting cuter!
+And you know? Now we can KO \TE easily.\mI should challenge the Cedolan Gym.
+And you know? Now we can KO \TE easily.\mI should challenge the Cedolan Gym.
+And you know? We just failed to beat \TE by a tiny margin.\mI'm guessing my Pokémon's levels aren't high enough yet...
+And you know? We just failed to beat \TE by a tiny margin.\mI'm guessing my Pokémon's levels aren't high enough yet...
+You must be a lot better now, huh?\mHow about showing me your technique in a real battle with me?\mI'll be waiting on \TM.
+You must be a lot better now, huh?\mHow about showing me your technique in a real battle with me?\mI'll be waiting on \TM.
+Where are you? Let's have our battle soon!\mI'll be waiting on \TM.
+Where are you? Let's have our battle soon!\mI'll be waiting on \TM.
+See you later!
+See you later!
+This is \TN!
+This is \TN!
+Hi, this is \TN!
+Hi, this is \TN!
+This is \TN! Good morning, \PN!
+This is \TN! Good morning, \PN!
+Hi, this is \TN! Good morning, \PN!
+Hi, this is \TN! Good morning, \PN!
+This is \TN! Good afternoon, \PN!
+This is \TN! Good afternoon, \PN!
+Hi, this is \TN! Good afternoon, \PN!
+Hi, this is \TN! Good afternoon, \PN!
+This is \TN! Good evening, \PN!
+This is \TN! Good evening, \PN!
+Hi, this is \TN! Good evening, \PN!
+Hi, this is \TN! Good evening, \PN!
+My \TP and I are getting more in sync with each other.
+My \TP and I are getting more in sync with each other.
+We battled a wild \TE and managed to beat it in a close match.\mWe're getting into the groove!
+We battled a wild \TE and managed to beat it in a close match.\mWe're getting into the groove!
+But, you know what? I still haven't caught \TE.\mIt's getting beyond frustrating...
+But, you know what? I still haven't caught \TE.\mIt's getting beyond frustrating...
+Would you be my practice partner again sometime?\mI'll be waiting on \TM...\mCould you take it a little easier on me next time?
+Would you be my practice partner again sometime?\mI'll be waiting on \TM...\mCould you take it a little easier on me next time?
+How soon can I expect to see you?\mDon't forget, \TM!
+How soon can I expect to see you?\mDon't forget, \TM!
+Bye! Let's chat again!
+Bye! Let's chat again!

@@ -1,0 +1,8 @@
+﻿# To localize this text for a particular language, please
+# translate every second line of this file.
+#-------------------------------
+[REGION_NAMES]
+Essen
+Essen
+Tiall
+Tiall

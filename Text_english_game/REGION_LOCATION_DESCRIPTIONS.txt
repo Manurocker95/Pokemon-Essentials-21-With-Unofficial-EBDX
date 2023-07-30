@@ -1,0 +1,16 @@
+﻿# To localize this text for a particular language, please
+# translate every second line of this file.
+#-------------------------------
+[REGION_LOCATION_DESCRIPTIONS]
+Oak's Lab
+Oak's Lab
+Cedolan Dept. Store
+Cedolan Dept. Store
+Ice Cave
+Ice Cave
+Cycle Road
+Cycle Road
+Rock Cave
+Rock Cave
+Diving area
+Diving area

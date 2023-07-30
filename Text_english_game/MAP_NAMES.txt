@@ -1,0 +1,46 @@
+﻿# To localize this text for a particular language, please
+# translate every second line of this file.
+#-------------------------------
+[MAP_NAMES]
+Intro
+Intro
+Lappet Town
+Lappet Town
+\PN's house
+\PN's house
+Pokémon Lab
+Pokémon Lab
+Route 1
+Route 1
+Cedolan City
+Cedolan City
+Route 2
+Route 2
+Lerucean Town
+Lerucean Town
+Natural Park
+Natural Park
+Route 3
+Route 3
+Ingido Plateau
+Ingido Plateau
+Route 4
+Route 4
+Route 5
+Route 5
+Route 6
+Route 6
+Route 7
+Route 7
+Battle Frontier
+Battle Frontier
+Safari Zone
+Safari Zone
+Route 8
+Route 8
+Berth Island
+Berth Island
+Faraday Island
+Faraday Island
+Tiall Region
+Tiall Region
