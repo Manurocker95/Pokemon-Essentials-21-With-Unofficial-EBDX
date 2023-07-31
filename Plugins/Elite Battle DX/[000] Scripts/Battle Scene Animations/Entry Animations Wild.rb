@@ -11,6 +11,15 @@ class EliteBattle_BasicWildAnimations
     @species = EliteBattle.get(:wildSpecies)
     @level = EliteBattle.get(:wildLevel)
     @form = EliteBattle.get(:wildForm) || 0
+    pbRegiChecks()
+    pbExtraChecks()
+    # returns false if no animation plays
+    return false
+  end
+  #-----------------------------------------------------------------------------
+  #  checks for player state
+  #-----------------------------------------------------------------------------
+  def pbRegiChecks
     # animation selection processing for any special transitions
     if !@species.nil?
       if self.isRegi?
@@ -21,6 +30,9 @@ class EliteBattle_BasicWildAnimations
         end
       end
     end
+  end  
+  
+  def pbExtraChecks
     # animation selection processing for regular battles
     if (!@level.nil? && @level > $player.party[0].level)
       return self.overlevel
@@ -33,9 +45,7 @@ class EliteBattle_BasicWildAnimations
     else
       return self.indoor
     end
-    # returns false if no animation plays
-    return false
-  end
+  end  
   #-----------------------------------------------------------------------------
   #  checks if queued Pokemon species is any of the Regis
   #-----------------------------------------------------------------------------

@@ -52,7 +52,6 @@ class WildBattle
   end
 
   def self.start(*args, can_override: false)
-    Graphics.frame_rate = 40
     # gets cached data
     data =  EliteBattle.get(:nextBattleData)
     wspecies = (!data.nil? && data.is_a?(Hash) && data.has_key?(:WILD_SPECIES)) ? data[:WILD_SPECIES] : nil
@@ -69,7 +68,7 @@ class WildBattle
     # caches species level
     EliteBattle.set(:wildLevel, args[1])
     # starts battle processing
-    ret = pbWildBattle_ebdx(*args)
+    ret = pbWildBattle_ebdx(*args, can_override: can_override)
     # returns output
     return ret
   end  

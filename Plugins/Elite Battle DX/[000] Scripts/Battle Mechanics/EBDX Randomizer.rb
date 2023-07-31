@@ -269,7 +269,7 @@ class WildBattle
     alias pbWildBattle_ebdx_randomizer start unless defined?(pbWildBattle_ebdx_randomizer)
   end
 
-  def self.start(*args, _can_override: false)
+  def self.start(*args, can_override: false)
     # randomizer
     if args.length <= 2
       for i in [0]
@@ -286,7 +286,7 @@ class WildBattle
     end
       
     # starts battle processing
-    return pbWildBattle_ebdx_randomizer(*args, can_override: _can_override)
+    return pbWildBattle_ebdx_randomizer(*args, can_override: can_override)
   end
 end  
 #===============================================================================

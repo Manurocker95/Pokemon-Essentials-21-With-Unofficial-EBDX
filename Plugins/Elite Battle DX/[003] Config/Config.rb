@@ -74,6 +74,9 @@ module EliteBattle
 
   # ZUD plugins clear cached data so EBDX gets stuck. Setting this to true skips the cache and directly loads the game.
   SKIP_CACHED_DATA = false
+
+  # In 21.1 coroutines need to be used and setting this option makes a bottleneck = "lag"
+  USE_EBDX_INITIAL_TRANSITION = false
 end
 #-------------------------------------------------------------------------------
 # Adds additional "camera" vectors for when the camera is idling
