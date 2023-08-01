@@ -310,7 +310,6 @@ module EliteBattle
         ret = true if self.can_transition?("#{ext}SM", id, (poke ? :Species : :Trainer), variant, extr)
       end
       str = poke ? "species" : "trainer"
-      echoln _INTL("{1}", id)
       id = id[0] if id.is_a?(Array)
       custom_id = poke ? GetSpeciesIndex(GameData::Species.get(id).id) : GetTrainerID(GameData::TrainerType.get(id).id)
       sym = poke ? GameData::Species.get(id).id : GameData::TrainerType.get(id).id

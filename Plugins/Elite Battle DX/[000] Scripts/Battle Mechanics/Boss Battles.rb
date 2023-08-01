@@ -168,6 +168,12 @@ module EliteBattle
   #-----------------------------------------------------------------------------
 end
 
+def pbNewBattleScene
+  return BattleCreationHelperMethods.create_battle_scene
+end  
+def pbPrepareBattle(battle)
+  BattleCreationHelperMethods.prepare_battle(battle)
+end  
 
 def pbTestBossBattle
   EliteBattle.bossBattle(:BULBASAUR, 20, 2, true,
