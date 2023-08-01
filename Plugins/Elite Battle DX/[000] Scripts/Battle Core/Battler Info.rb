@@ -11,14 +11,16 @@ end
 #===============================================================================
 def getBattlerAltitude(battler)
   return 0 if battler.nil? || battler.displaySpecies.nil?
+
+  ret = EliteBattle.get_data(battler.displaySpecies, :Species, :ALTITUDE, (battler.displayForm rescue 0))
+  return ret
+
   dat = GameData::SpeciesMetrics.get(battler.displaySpecies)
   return 0 if dat.nil?
   ret = (dat.front_sprite_altitude rescue 0)
   ret = 0 if ret.nil?
-  ret = EliteBattle.get_data(battler.displaySpecies, :Species, :ALTITUDE, (battler.displayForm rescue 0))
   return ret
-end
-#-------------------------------------------------------------------------------
+end---------------------------------------------------------------------------
 def playBattlerCry(battler)
   pokemon = battler.displayPokemon
   pokemon = :BIDOOF if GameData::Species.exists?(:BIDOOF) && defined?(firstApr?) && firstApr?

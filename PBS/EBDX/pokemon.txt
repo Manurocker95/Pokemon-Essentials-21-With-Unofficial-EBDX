@@ -24,12 +24,12 @@ BattlerPlayerY          = 59
 BattlerEnemyX           = 2
 #-------------------------------
 [CHARMANDER]
-BattlerEnemyY           = 15
+BattlerEnemyY           = 11
 InternalName            = CHARMANDER
 BattlerAltitude         = 0
-BattlerPlayerX          = -37
-BattlerPlayerY          = 4
-BattlerEnemyX           = 18
+BattlerPlayerX          = 13
+BattlerPlayerY          = 7
+BattlerEnemyX           = 6
 #-------------------------------
 [CHARMELEON]
 BattlerEnemyY           = 33
@@ -283,8 +283,8 @@ BattlerEnemyX           = -10
 BattlerEnemyY           = 8
 InternalName            = CLEFABLE
 BattlerAltitude         = 0
-BattlerPlayerX          = 0
-BattlerPlayerY          = 58
+BattlerPlayerX          = 27
+BattlerPlayerY          = 21
 BattlerEnemyX           = 6
 #-------------------------------
 [VULPIX]
@@ -5593,8 +5593,8 @@ BattleVS                = eliteSM
 BattlerAltitude         = 10
 BattlerPlayerX          = -71
 BattlerPlayerY          = 47
-BattlerEnemyX           = 0
 BattleEnv               = DARKNESS
+BattlerEnemyX           = 0
 #-------------------------------
 [SHAYMIN,1]
 BattlerEnemyY           = 14
@@ -5989,12 +5989,12 @@ BattlerPlayerY          = 0
 BattlerEnemyX           = 0
 #-------------------------------
 [NINETALES,1]
-BattlerEnemyY           = 0
+BattlerEnemyY           = 51
 InternalName            = NINETALES
 BattlerAltitude         = 0
-BattlerPlayerX          = 0
-BattlerPlayerY          = 0
-BattlerEnemyX           = 0
+BattlerPlayerX          = 2
+BattlerPlayerY          = 45
+BattlerEnemyX           = 2
 #-------------------------------
 [DIGLETT,1]
 BattlerEnemyY           = 78
