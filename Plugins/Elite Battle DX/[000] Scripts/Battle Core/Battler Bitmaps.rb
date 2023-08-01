@@ -179,7 +179,7 @@ def pbCheckPokemonBitmapFiles(params)
       species_id = EliteBattle.GetSpeciesIndex(species)
       species_ = EliteBattle.GetSpeciesID(species)
 
-      if EliteBattle::PRIORIZE_ANIMATED_SPRITES
+      if EliteBattle::PRIORITIZE_ANIMATED_SPRITES
         bitmapFileName = sprintf("#{folder}#{dir}/%03d%s%s", species_id, (tform != "" ? "_" + tform : ""), tshadow ? "_shadow" : "")
         bitmapFileName = sprintf("#{folder}#{dir}/%s%s%s", species_, (tform != "" ? "_" + tform : ""), tshadow ? "_shadow" : "") if !pbResolveBitmap(bitmapFileName)
       else
@@ -208,7 +208,7 @@ def pbPokemonBitmapFile(species, shiny, back=false)
     folder += "Front/"
   end
   #GameData::Species.try_get(species)&.species
-  if EliteBattle::PRIORIZE_ANIMATED_SPRITES
+  if EliteBattle::PRIORITIZE_ANIMATED_SPRITES
     species_id = EliteBattle.GetSpeciesIndex(species) 
     name = sprintf("#{folder}%03d", species_id) #check %s 
     ret = pbResolveBitmap(name)
