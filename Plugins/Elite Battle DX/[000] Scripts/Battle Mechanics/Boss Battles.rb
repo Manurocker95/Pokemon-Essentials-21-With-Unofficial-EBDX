@@ -58,7 +58,7 @@ module EliteBattle
     genwildpoke = data.is_a?(Pokemon) ? data : self.generateWild(data)
     handled = [nil]
     # wild battle override
-    Events.onWildBattleOverride.trigger(genwildpoke, genwildpoke.species, genwildpoke.level, handled)
+    EventHandlers.trigger(:on_calling_wild_battle, genwildpoke.species, genwildpoke.level, handled)
     return handled[0] if handled[0] != nil
     # Skip battle if the player has no able Pokémon, or if holding Ctrl in Debug mode
     if $player.able_pokemon_count == 0 || ($DEBUG && Input.press?(Input::CTRL))
@@ -73,7 +73,7 @@ module EliteBattle
     end
     # Record information about party Pokémon to be used at the end of battle (e.g.
     # comparing levels for an evolution check)
-    Events.onStartBattle.trigger(nil)
+    EventHandlers.trigger(:on_start_battle)
     # Generate wild Pokémon based on the species and level
     foeParty = [genwildpoke]
     # Calculate who the trainers and their party are
@@ -131,7 +131,7 @@ module EliteBattle
     Input.update
     pbSet(outcomeVar, decision)
     # Used by the Poké Radar to update/break the chain
-    Events.onWildBattleEnd.trigger(nil, genwildpoke.species, genwildpoke.level, decision)
+    EventHandlers.trigger(:on_wild_battle_end, genwildpoke.species, genwildpoke.level, decision)
     # return full decision outcome
     return (decision != 2 && decision != 5)
   end

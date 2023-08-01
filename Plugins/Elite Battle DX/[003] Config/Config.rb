@@ -77,6 +77,9 @@ module EliteBattle
 
   # In 21.1 coroutines need to be used and setting this option makes a bottleneck = "lag"
   USE_EBDX_INITIAL_TRANSITION = false
+
+  #if set to false, pokemon_metrics.txt is checked first (default Essentials file). If not, that file is skipped.
+  FORCE_EBDX_ALTITUDE = true
 end
 #-------------------------------------------------------------------------------
 # Adds additional "camera" vectors for when the camera is idling
