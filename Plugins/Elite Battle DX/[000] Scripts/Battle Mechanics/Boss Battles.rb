@@ -115,7 +115,7 @@ module EliteBattle
     # Create the battle scene (the visual side of it)
     scene = pbNewBattleScene
     # Create the battle class (the mechanics side of it)
-    battle = PokeBattle_Battle.new(scene, playerParty, foeParty, playerTrainers, nil)
+    battle = Battle.new(scene, playerParty, foeParty, playerTrainers, nil)
     battle.party1starts = playerPartyStarts
     # Set various other properties in the battle class
     pbPrepareBattle(battle)
