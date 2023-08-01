@@ -1,5 +1,5 @@
 ﻿Name       = Elite Battle: DX
-Version    = 1.4.0 (E21)
+Version    = 1.4.1 (E21)
 Essentials = 21.1
 Conflicts  = Elite Battle System
 Requires   = Luka's Scripting Utilities,3.3
@@ -8,6 +8,9 @@ Credits    = Luka S.J.,Maruno,Marin,Pokecheck.org,PinkCatDragon,Tebited15,BadSam
 #====================================================================
 # Change log
 #====================================================================
+# 1.0.2 - Considered as 1.4.1
+# - HotFix in BossBattles regarding clear battle rules which were making them to crash
+#
 # 1.0.1 - Considered as 1.4.0
 # - HotFix in BossBattles regarding wrong names for event handling
 #

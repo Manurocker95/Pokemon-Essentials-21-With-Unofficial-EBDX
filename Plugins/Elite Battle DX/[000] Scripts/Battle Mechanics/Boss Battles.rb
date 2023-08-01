@@ -64,7 +64,7 @@ module EliteBattle
     if $player.able_pokemon_count == 0 || ($DEBUG && Input.press?(Input::CTRL))
       pbMessage(_INTL("SKIPPING BATTLE...")) if $player.pokemonCount>0
       pbSet(outcomeVar, 1)   # Treat it as a win
-      $game_temp.clearBattleRules
+      $game_temp.clear_battle_rules
       $PokemonGlobal.nextBattleBGM       = nil
       $PokemonGlobal.nextBattleVictoryBGM       = nil
       $PokemonGlobal.nextBattleCaptureME = nil
@@ -119,7 +119,7 @@ module EliteBattle
     battle.party1starts = playerPartyStarts
     # Set various other properties in the battle class
     pbPrepareBattle(battle)
-    $game_temp.clearBattleRules
+    $game_temp.clear_battle_rules
     # Perform the battle itself
     decision = 0
     pbBattleAnimation(pbGetWildBattleBGM(foeParty), (foeParty.length == 1) ? 0 : 2, foeParty) {
@@ -166,4 +166,14 @@ module EliteBattle
     return self.wildBattle(data, partysize, false, false)
   end
   #-----------------------------------------------------------------------------
+end
+
+
+def pbTestBossBattle
+  EliteBattle.bossBattle(:BULBASAUR, 20, 2, true,
+  { 
+    :form => 1,
+    :shiny => true, 
+    :bossboost => { :HP => 1.75, :ATTACK => 1.25, :DEFENSE => 1.25, :SPECIAL_ATTACK => 1.25, :SPECIAL_DEFENSE => 1.25, :SPEED => 1.25 }
+  })
 end
