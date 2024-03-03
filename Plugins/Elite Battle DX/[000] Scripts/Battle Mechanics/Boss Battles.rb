@@ -126,7 +126,7 @@ module EliteBattle
       pbSceneStandby {
         decision = battle.pbStartBattle
       }
-      pbAfterBattle(decision, canLose)
+      BattleCreationHelperMethods.after_battle(decision, canLose)
     }
     Input.update
     pbSet(outcomeVar, decision)

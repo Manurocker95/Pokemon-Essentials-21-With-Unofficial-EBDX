@@ -104,12 +104,12 @@ BattlerPlayerY          = 78
 BattlerEnemyX           = 0
 #-------------------------------
 [KAKUNA]
-BattlerEnemyY           = 64
+BattlerEnemyY           = 9
 InternalName            = KAKUNA
 BattlerAltitude         = 0
-BattlerPlayerX          = 11
-BattlerPlayerY          = 71
-BattlerEnemyX           = 6
+BattlerPlayerX          = -19
+BattlerPlayerY          = 8
+BattlerEnemyX           = -3
 #-------------------------------
 [BEEDRILL]
 BattlerEnemyY           = 33
