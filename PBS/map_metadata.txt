@@ -11,9 +11,10 @@ MapPosition = 0,13,12
 BattleBack = field
 #-------------------------------
 [003]   # Player's house
-Name = \PN's house
+Name = Manu's house
 HealingSpot = 2,8,8
 MapPosition = 0,13,12
+WildBattleBGM = Battle Champion
 #-------------------------------
 [004]   # Pokémon Lab
 Name = Pokémon Lab

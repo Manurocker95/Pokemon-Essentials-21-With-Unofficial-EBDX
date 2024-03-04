@@ -183,3 +183,12 @@ def pbTestBossBattle
     :bossboost => { :HP => 1.75, :ATTACK => 1.25, :DEFENSE => 1.25, :SPECIAL_ATTACK => 1.25, :SPECIAL_DEFENSE => 1.25, :SPEED => 1.25 }
   })
 end
+
+def pbTestBossBattle2
+  EliteBattle.assign_bgm("Battle victory leader.ogg", :DIALGA)
+  EliteBattle.bossBattle(:DIALGA, 15, 2, false, {
+    :iv => { :HP => 31, :ATTACK => 31, :DEFENSE => 31, :SPECIAL_ATTACK => 31, :SPECIAL_DEFENSE =>31, :SPEED =>31 },
+    :bossboost => { :HP => 2.00, :ATTACK => 1.25, :DEFENSE => 1.50, :SPECIAL_ATTACK => 1.50, :SPECIAL_DEFENSE => 2.00, :SPEED => 1.25 },
+    :moves => [ :FLAMETHROWER, :ROAROFTIME, :SNARL, :TACKLE ]
+  })
+end

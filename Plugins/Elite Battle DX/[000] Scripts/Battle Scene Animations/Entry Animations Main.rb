@@ -24,7 +24,7 @@ def pbBattleAnimation(bgm = nil, battletype = 0, foe = nil)
   mapBGM = EliteBattle.get_map_data(:BGM)
   bgm = mapBGM if !mapBGM.nil?
   pkmnBGM = EliteBattle.next_bgm?(EliteBattle.get(:wildSpecies), EliteBattle.get(:wildForm), 0, :Species)
-  bgm = pkmnBGM if !pkmnBGM.nil? && !trainerid
+  bgm = pkmnBGM if !pkmnBGM.nil?
   # gets trainer ID
   trainerid = (foe && foe[0].is_a?(Trainer) ? foe[0].trainer_type : nil) rescue nil
   trBGM = trainerid ? EliteBattle.next_bgm?(trainerid, foe[0].name, foe[0].partyID, :Trainer) : nil
