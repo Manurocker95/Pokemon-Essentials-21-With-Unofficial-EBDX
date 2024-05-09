@@ -1352,8 +1352,28 @@ class ClassicVSSequence
   #-----------------------------------------------------------------------------
   #  wait for frame skip
   #-----------------------------------------------------------------------------
-  def wait(frames = 1)
+  def wait_old(frames = 1)
     frames.times do
+      self.update
+      Graphics.update
+    end
+  end
+
+  def wait(frames = 1)
+    if EliteBattle::USE_DELTA_TIME_HOTFIX
+    duration = frames / Graphics.frame_rate
+     pbWaitFix(duration) do |deltaTime|
+        # do sth
+     end 
+    else
+      wait_old(frames)
+    end
+  end
+
+  def pbWaitFix(duration)
+    timer_start = System.uptime
+    until System.uptime - timer_start >= duration
+      yield System.uptime - timer_start if block_given?
       self.update
       Graphics.update
     end
