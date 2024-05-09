@@ -229,20 +229,39 @@ class Battle::Scene
     @sprites["box2"].x = @viewport.width + 2
     @sprites["box2"].y = @viewport.height - 32
     x = v > 0 ? -8 : -6
-    for i in 0...20.delta_add
-      k = 20.delta_add/20.0
-      moveEntireScene(x, (speech ? +2 : -1), true, true) if i%k > 0 || k == 1
-      @sprites["opponent"].opacity += 12.8.delta_sub(false)
-      @sprites["opponent"].x += x if i%k > 0 || k == 1
-      @sprites["opponent"].y += (speech ? 2 : -1) if i%k > 0 || k == 1
-      @sprites["box1"].zoom_x += (@viewport.width/16).delta_sub(false) if speech
-      @sprites["box2"].zoom_x += (@viewport.width/16).delta_sub(false) if speech
-      self.wait(1, true)
+    if EliteBattle::USE_TRAINER_OUT_OF_PLACE_HOTFIX
+      for i in 0...20.delta_add
+        k = 20.delta_add/20.0
+        #moveEntireScene(x, (speech ? +2 : -1), true, true) if i%k > 0 || k == 1
+        @sprites["opponent"].opacity += 12.8.delta_sub(false)
+        @sprites["opponent"].x += x/20 if i%k > 0 || k == 1
+        endx = @sprites["opponent"].x
+        @sprites["opponent"].y +=0 if i%k > 0 || k == 1
+        endy = @sprites["opponent"].y
+        @sprites["box1"].zoom_x += (@viewport.width/16).delta_sub(false) if speech
+        @sprites["box2"].zoom_x += (@viewport.width/16).delta_sub(false) if speech
+        self.wait(1, true)
+      end
+        @sprites["opponent"].x = endx
+        @sprites["opponent"].y = endy # + (speech ? 2 : -1)
+        @sprites["box1"].zoom_x = @viewport.width if speech
+        @sprites["box2"].zoom_x = @viewport.width if speech
+    else  
+      for i in 0...20.delta_add
+        k = 20.delta_add/20.0
+        moveEntireScene(x, (speech ? +2 : -1), true, true) if i%k > 0 || k == 1
+        @sprites["opponent"].opacity += 12.8.delta_sub(false)
+        @sprites["opponent"].x += x if i%k > 0 || k == 1
+        @sprites["opponent"].y += (speech ? 2 : -1) if i%k > 0 || k == 1
+        @sprites["box1"].zoom_x += (@viewport.width/16).delta_sub(false) if speech
+        @sprites["box2"].zoom_x += (@viewport.width/16).delta_sub(false) if speech
+        self.wait(1, true)
+      end
+      @sprites["opponent"].x = ox + x*20
+      @sprites["opponent"].y = oy + (speech ? 2 : -1)*20
+      @sprites["box1"].zoom_x = @viewport.width if speech
+      @sprites["box2"].zoom_x = @viewport.width if speech
     end
-    @sprites["opponent"].x = ox + x*20
-    @sprites["opponent"].y = oy + (speech ? 2 : -1)*20
-    @sprites["box1"].zoom_x = @viewport.width if speech
-    @sprites["box2"].zoom_x = @viewport.width if speech
   end
   #-----------------------------------------------------------------------------
   #  visuals to hide opponent in scene
@@ -252,19 +271,33 @@ class Battle::Scene
     pbSetMessageMode(false)
     v = (@battle.doublebattle? && speech) ? 3 : -1
     x = v > 0 ? 8 : 6
-    for i in 0...20.delta_add
-      k = 20.delta_add/20.0
-      moveEntireScene(x, (speech ? -2 : +1), true, true) if i%k > 0 || k == 1
-      @sprites["opponent"].opacity -= 12.8.delta_sub(false)
-      @sprites["opponent"].x += x if i%k > 0 || k == 1
-      @sprites["opponent"].y -= (speech ? 2 : -1) if i%k > 0 || k == 1
-      @sprites["box1"].zoom_x -= (@viewport.width/16).delta_sub(false) if speech
-      @sprites["box2"].zoom_x -= (@viewport.width/16).delta_sub(false) if speech
-      self.wait(1, true)
+    if EliteBattle::USE_TRAINER_OUT_OF_PLACE_HOTFIX
+      for i in 0...20.delta_add
+        k = 20.delta_add/20.0
+        @sprites["opponent"].opacity -= 12.8.delta_sub(false)
+        @sprites["opponent"].x += x/20 if i%k > 0 || k == 1
+        @sprites["box1"].zoom_x -= (@viewport.width/16).delta_sub(false) if speech
+        @sprites["box2"].zoom_x -= (@viewport.width/16).delta_sub(false) if speech
+        self.wait(1, true)
+      end
+      @sprites["opponent"].opacity = 0
+      @sprites["box1"].zoom_x = 0 if speech
+      @sprites["box2"].zoom_x = 0 if speech
+    else  
+      for i in 0...20.delta_add
+        k = 20.delta_add/20.0
+        moveEntireScene(x, (speech ? -2 : +1), true, true) if i%k > 0 || k == 1
+        @sprites["opponent"].opacity -= 12.8.delta_sub(false)
+        @sprites["opponent"].x += x if i%k > 0 || k == 1
+        @sprites["opponent"].y -= (speech ? 2 : -1) if i%k > 0 || k == 1
+        @sprites["box1"].zoom_x -= (@viewport.width/16).delta_sub(false) if speech
+        @sprites["box2"].zoom_x -= (@viewport.width/16).delta_sub(false) if speech
+        self.wait(1, true)
+      end
+      @sprites["opponent"].opacity = 0
+      @sprites["box1"].zoom_x = 0 if speech
+      @sprites["box2"].zoom_x = 0 if speech
     end
-    @sprites["opponent"].opacity = 0
-    @sprites["box1"].zoom_x = 0 if speech
-    @sprites["box2"].zoom_x = 0 if speech
     # show databoxes
     pbShowAllDataboxes
     # dispose sprites

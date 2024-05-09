@@ -84,6 +84,8 @@ module EliteBattle
   #if set to false, the original "frame system" is used instead of the new deltaTime 
   USE_DELTA_TIME_HOTFIX = false
   DEFAULT_FRAMERATE = 60
+
+  USE_TRAINER_OUT_OF_PLACE_HOTFIX = false
 end
 #-------------------------------------------------------------------------------
 # Adds additional "camera" vectors for when the camera is idling
