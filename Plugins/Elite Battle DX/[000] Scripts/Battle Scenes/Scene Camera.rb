@@ -122,8 +122,10 @@ class Battle::Scene
   #  scene wait with animation
   #-----------------------------------------------------------------------------
   def wait(frames = 1, align = false, &block)
+    mult = Graphics.frame_rate/EliteBattle::DEFAULT_FRAMERATE 
+    frames = frames * mult
     if EliteBattle::USE_DELTA_TIME_HOTFIX
-    duration = frames / Graphics.frame_rate
+      duration = (frames / Graphics.frame_rate )
      pbWaitFix(duration) do |deltaTime|
         # do sth
         animateScene(align, &block)

@@ -268,10 +268,14 @@ class PokemonEggHatch_Scene
   end
   
   def wait(frames = 1)
+    mult = Graphics.frame_rate/EliteBattle::DEFAULT_FRAMERATE 
+    frames = frames * mult
     if EliteBattle::USE_DELTA_TIME_HOTFIX
-    duration = frames / Graphics.frame_rate
+      duration = (frames / Graphics.frame_rate )
      pbWaitFix(duration) do |deltaTime|
         # do sth
+        Graphics.update
+        self.update
      end 
     else
       wait_old(frames)
@@ -282,8 +286,6 @@ class PokemonEggHatch_Scene
     timer_start = System.uptime
     until System.uptime - timer_start >= duration
       yield System.uptime - timer_start if block_given?
-      Graphics.update
-      self.update
     end
   end
   #-----------------------------------------------------------------------------

@@ -81,7 +81,9 @@ module EliteBattle
   #if set to false, pokemon_metrics.txt is checked first (default Essentials file). If not, that file is skipped.
   FORCE_EBDX_ALTITUDE = true
 
+  #if set to false, the original "frame system" is used instead of the new deltaTime 
   USE_DELTA_TIME_HOTFIX = false
+  DEFAULT_FRAMERATE = 60
 end
 #-------------------------------------------------------------------------------
 # Adds additional "camera" vectors for when the camera is idling
