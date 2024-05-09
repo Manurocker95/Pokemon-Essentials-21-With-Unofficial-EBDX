@@ -26,13 +26,26 @@ def pbLoadPokemonBitmapSpecies(pokemon, species, back = false, scale = EliteBatt
   species_id = EliteBattle.GetSpeciesIndex(species)
   #echoln _INTL("Species ID: {1}",species_id)
   if pokemon.egg?
-    bitmapFileName = sprintf("Graphics/EBDX/Battlers/Eggs/%s", species) rescue nil
+        eggPath = "Graphics/EBDX/Battlers/Eggs/"
+    bitmapFileName = sprintf("#{eggPath}%s", species) rescue nil
     if !pbResolveBitmap(bitmapFileName)
-      bitmapFileName = sprintf("Graphics/EBDX/Battlers/Eggs/%03d", species_id)
+      bitmapFileName = sprintf("#{eggPath}%03d", species_id)
       if !pbResolveBitmap(bitmapFileName)
-        bitmapFileName = sprintf("Graphics/EBDX/Battlers/Eggs/000")
+        bitmapFileName = sprintf("#{eggPath}Eggs/000")
       end
     end
+
+    if !pbResolveBitmap(bitmapFileName)
+      eggPath = "Graphics/Pokemon/Eggs/"
+      bitmapFileName = sprintf("#{eggPath}%s", species) rescue nil
+      if !pbResolveBitmap(bitmapFileName)
+        bitmapFileName = sprintf("#{eggPath}%03d", species_id)
+        if !pbResolveBitmap(bitmapFileName)
+          bitmapFileName = sprintf("#{eggPath}Eggs/000")
+        end
+      end
+    end
+
     bitmapFileName = pbResolveBitmap(bitmapFileName)
   else
     shiny = pokemon.shiny?
@@ -42,6 +55,7 @@ def pbLoadPokemonBitmapSpecies(pokemon, species, back = false, scale = EliteBatt
   end
   if bitmapFileName.nil?
     bitmapFileName = "Graphics/EBDX/Battlers/000"
+    bitmapFileName = "Graphics/Pokemon/Front/000" if !pbResolveBitmap(bitmapFileName)
     EliteBattle.log.warn(missingPokeSpriteError(pokemon, back))
   end
   animatedBitmap = BitmapEBDX.new(bitmapFileName, scale, speed) if bitmapFileName
@@ -101,13 +115,27 @@ def pbLoadSpeciesBitmap(species, female=false, form=0, shiny=false, shadow=false
   species_id = EliteBattle.GetSpeciesIndex(species)
   # check sprite
   if egg
-    bitmapFileName = sprintf("Graphics/EBDX/Battlers/Eggs/%s", species) rescue nil
+    eggPath = "Graphics/EBDX/Battlers/Eggs/"
+    bitmapFileName = sprintf("#{eggPath}%s", species) rescue nil
     if !pbResolveBitmap(bitmapFileName)
-      bitmapFileName = sprintf("Graphics/EBDX/Battlers/Eggs/%03d", species_id)
+      bitmapFileName = sprintf("#{eggPath}%03d", species_id)
       if !pbResolveBitmap(bitmapFileName)
-        bitmapFileName = sprintf("Graphics/EBDX/Battlers/Eggs/000")
+        bitmapFileName = sprintf("#{eggPath}Eggs/000")
       end
     end
+
+    if !pbResolveBitmap(bitmapFileName)
+      eggPath = "Graphics/Pokemon/Eggs/"
+      bitmapFileName = sprintf("#{eggPath}%s", species) rescue nil
+      if !pbResolveBitmap(bitmapFileName)
+        bitmapFileName = sprintf("#{eggPath}%03d", species_id)
+        if !pbResolveBitmap(bitmapFileName)
+          bitmapFileName = sprintf("#{eggPath}Eggs/000")
+        end
+      end
+    end
+
+    bitmapFileName = pbResolveBitmap(bitmapFileName)
     bitmapFileName = pbResolveBitmap(bitmapFileName)
   else
     bitmapFileName = pbCheckPokemonBitmapFiles([species, back, female, shiny, form, shadow, false, false])
