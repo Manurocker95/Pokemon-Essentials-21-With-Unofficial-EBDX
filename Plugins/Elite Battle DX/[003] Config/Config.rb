@@ -75,14 +75,11 @@ module EliteBattle
   # ZUD plugins clear cached data so EBDX gets stuck. Setting this to true skips the cache and directly loads the game.
   SKIP_CACHED_DATA = false
 
-  # In 21.1 coroutines need to be used and setting this option makes a bottleneck = "lag"
-  USE_EBDX_INITIAL_TRANSITION = true
-
   #if set to false, pokemon_metrics.txt is checked first (default Essentials file). If not, that file is skipped.
   FORCE_EBDX_ALTITUDE = true
 
   #if set to false, the original "frame system" is used instead of the new deltaTime. The "original" has a hotfix as well based on waiting frames
-  USE_DELTA_TIME_HOTFIX = false
+  USE_DELTA_TIME_HOTFIX = true
   DEFAULT_FRAMERATE = 60
 
   USE_TRAINER_OUT_OF_PLACE_HOTFIX = false
