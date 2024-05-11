@@ -78,11 +78,17 @@ module EliteBattle
   #if set to false, pokemon_metrics.txt is checked first (default Essentials file). If not, that file is skipped.
   FORCE_EBDX_ALTITUDE = true
 
-  #if set to false, the original "frame system" is used instead of the new deltaTime. The "original" has a hotfix as well based on waiting frames
+  #if set to false, the original "frame system" is used instead of the new deltaTime. The "original" has a hotfix as well based on waiting frames.
   USE_DELTA_TIME_HOTFIX = true
+
+  #Target framerate to check the current Graphics.frame_rate. Duration for pbWait is calculated by frames / current fps and the multiplier by current fps / target rate. 60/60 = 1 so mult doesn't apply.
   DEFAULT_FRAMERATE = 60
 
+  # Apply extra offsets based to pbShowOpponent and pbHideOpponent (still in test).
   USE_TRAINER_OUT_OF_PLACE_HOTFIX = false
+
+  # If true, it always check the species count in GameData. If the full count is detected to be less than expected, it reinitilize the pokemon species list.
+  TRY_TO_ALWAYS_INITIALIZE = true
 end
 #-------------------------------------------------------------------------------
 # Adds additional "camera" vectors for when the camera is idling
