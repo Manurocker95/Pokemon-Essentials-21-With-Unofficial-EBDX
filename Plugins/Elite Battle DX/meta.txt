@@ -1,5 +1,5 @@
 ﻿Name       = Elite Battle: DX
-Version    = 1.4.3 (E21)
+Version    = 1.4.4 (E21)
 Essentials = 21.1
 Conflicts  = Elite Battle System
 Requires   = Luka's Scripting Utilities,3.3
@@ -8,6 +8,9 @@ Credits    = Luka S.J.,Maruno,Marin,Pokecheck.org,PinkCatDragon,Tebited15,BadSam
 #====================================================================
 # Change log
 #====================================================================
+# 1.0.5 - Considered as 1.4.4
+# - Fixed waits for intros in battle and changed the "hotfix" from SceoFlash13 to he new delta time
+#
 # 1.0.4 - Considered as 1.4.3
 # - Added default essentials Path for sprites (Graphics/Pokemon)
 #
