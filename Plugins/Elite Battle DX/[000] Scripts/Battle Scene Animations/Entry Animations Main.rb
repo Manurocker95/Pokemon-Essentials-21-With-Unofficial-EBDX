@@ -52,26 +52,25 @@ def pbBattleAnimation(bgm = nil, battletype = 0, foe = nil)
     break
   end
   
-  if EliteBattle::USE_EBDX_INITIAL_TRANSITION
-    # checks if the Sun & Moon styled VS sequence is to be played
-    EliteBattle.sun_moon_transition?(trainerid, false, (foe[0].name rescue 0), (foe[0].partyID rescue 0)) if trainerid && foe && foe.length < 2
-    EliteBattle.sun_moon_transition?(EliteBattle.get(:wildSpecies), true, EliteBattle.get(:wildForm)) if !trainerid
+  # checks if the Sun & Moon styled VS sequence is to be played
+  EliteBattle.sun_moon_transition?(trainerid, false, (foe[0].name rescue 0), (foe[0].partyID rescue 0)) if trainerid && foe && foe.length < 2
+  EliteBattle.sun_moon_transition?(EliteBattle.get(:wildSpecies), true, EliteBattle.get(:wildForm)) if !trainerid
 
+  if !handled
+    # plays custom transition if applicable
+    handled = EliteBattle.play_next_transition(viewport, trainerid)
+    
+    # plays basic trainer intro animation
+    if !handled && trainerid
+      handled = EliteBattle_BasicTrainerAnimations.new(viewport, battletype, foe)
+    end
+    
+    # plays custom transition
     if !handled
-      # plays custom transition if applicable
-      handled = EliteBattle.play_next_transition(viewport, trainerid)
-      
-      # plays basic trainer intro animation
-      if !handled && trainerid
-        handled = EliteBattle_BasicTrainerAnimations.new(viewport, battletype, foe)
-      end
-      
-      # plays custom transition
-      if !handled
-        handled = EliteBattle_BasicWildAnimations.new(viewport)
-      end
-    end  
-  end
+      handled = EliteBattle_BasicWildAnimations.new(viewport)
+    end
+  end  
+
  
   # Default battle intro animation
   if !handled
@@ -144,7 +143,7 @@ def pbBattleAnimationOriginal(bgm = nil, battletype = 0, foe = nil)
   end
   # stops currently playing ME
   pbMEFade(0.25)
-  pbWait(8)
+  pbWait(8/Graphics.frame_rate)
   pbMEStop
   # checks if battle BGM is registered for species or trainer
   mapBGM = EliteBattle.get_map_data(:BGM)
@@ -168,7 +167,7 @@ def pbBattleAnimationOriginal(bgm = nil, battletype = 0, foe = nil)
     viewport.color.alpha = 0
     for i in 0...16.delta_add
       viewport.color.alpha += (32 * (i < 8.delta_add ? 1 : -1)).delta_sub(false)
-      pbWait(1)
+      pbWait(1/Graphics.frame_rate)
     end
   end
   viewport.color.alpha = 0

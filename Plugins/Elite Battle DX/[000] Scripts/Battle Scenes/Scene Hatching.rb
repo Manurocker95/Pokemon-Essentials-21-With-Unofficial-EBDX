@@ -273,7 +273,7 @@ class PokemonEggHatch_Scene
     frames = frames * mult
     if EliteBattle::USE_DELTA_TIME_HOTFIX
       duration = (frames / Graphics.frame_rate )
-     pbWaitFix(duration) do |deltaTime|
+      pbWaitFix(duration) do |deltaTime|
         # do sth
         self.update
         Graphics.update

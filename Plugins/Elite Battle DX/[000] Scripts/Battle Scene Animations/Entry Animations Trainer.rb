@@ -43,6 +43,7 @@ class EliteBattle_BasicTrainerAnimations
   # first variant trainer battle animation
   #-----------------------------------------------------------------------------
   def anim1
+    multFPS = 1/Graphics.frame_rate
     # load ball sprite
     ball = Sprite.new(@viewport)
     ball.bitmap = pbBitmap("Graphics/EBDX/Transitions/Common/ball")
@@ -54,13 +55,13 @@ class EliteBattle_BasicTrainerAnimations
       ball.angle += 22.5/self.delta
       ball.zoom_x += 0.0625/self.delta
       ball.zoom_y += 0.0625/self.delta
-      pbWait(1)
+      pbWait(multFPS)
     end
     ball.angle = 0
     ball.zoom = 1
     # take screenshot
     bmp = Graphics.snap_to_bitmap
-    pbWait(8.delta_add)
+    pbWait(8.delta_add/Graphics.frame_rate)
     # dispose ball sprite
     ball.dispose
     # black background
@@ -81,7 +82,7 @@ class EliteBattle_BasicTrainerAnimations
     16.delta_add.times do
       field1.x -= (@viewport.width/16)/self.delta
       field2.x += (@viewport.width/16)/self.delta
-      pbWait(1)
+      pbWait(multFPS)
     end
     field1.x = -@viewport.width
     field2.x = @viewport.width
@@ -95,6 +96,7 @@ class EliteBattle_BasicTrainerAnimations
   # second variant trainer battle animation
   #-----------------------------------------------------------------------------
   def anim2
+    multFPS = 1/Graphics.frame_rate
     # take screenshot and draw black background
     bmp = Graphics.snap_to_bitmap
     black = Sprite.new(@viewport)
@@ -129,7 +131,7 @@ class EliteBattle_BasicTrainerAnimations
     16.delta_add.times do
       ball1.x -= (@viewport.width/8)/self.delta
       ball2.x += (@viewport.width/8)/self.delta
-      pbWait(1)
+      pbWait(multFPS)
     end
     # move screenshots
     32.delta_add.times do
@@ -137,7 +139,7 @@ class EliteBattle_BasicTrainerAnimations
       field1.y -= (@viewport.height/32)/self.delta
       field2.x += (@viewport.width/16)/self.delta
       field2.y += (@viewport.height/32)/self.delta
-      pbWait(1)
+      pbWait(multFPS)
     end
     @viewport.color = Color.black
     # dispose unused sprites
@@ -151,6 +153,7 @@ class EliteBattle_BasicTrainerAnimations
   # third variant trainer battle animation
   #-----------------------------------------------------------------------------
   def anim3
+    multFPS = 1/Graphics.frame_rate
     # hash to store all sprites
     balls = {}
     rects = {}
@@ -182,7 +185,7 @@ class EliteBattle_BasicTrainerAnimations
         balls["#{i}"].angle -= ((i%2==0) ? 32 : -32)/self.delta
         rects["#{i}"].zoom_x += 12/self.delta
       end
-      pbWait(1)
+      pbWait(multFPS)
     end
     @viewport.color = Color.black
     # disposes unused sprites
@@ -269,13 +272,14 @@ class EliteBattle_BasicTrainerAnimations
   # displays the animation for the evil team logo (can be standalone)
   #-----------------------------------------------------------------------------
   def evilTeam(viewport = nil, trainerid = -1)
+    multFPS = 1/Graphics.frame_rate
     @viewport = viewport if !@viewport && !viewport.nil?
     @sprites = {} if !@sprites
     @viewport.color = Color.new(0, 0, 0, 0)
     # fades viewport to black
     8.delta_add.times do
       @viewport.color.alpha += 32/self.delta
-      pbWait(1)
+      pbWait(multFPS)
     end
     @viewport.color.alpha = 255
     bitmaps = [
@@ -382,7 +386,7 @@ class EliteBattle_BasicTrainerAnimations
         @sprites["e1_#{j}"].opacity += speed[j]/self.delta
         @sprites["e1_#{j}"].ox -=  [1, speed[j]/self.delta].max
       end
-      pbWait(1)
+      pbWait(multFPS)
     end
     # configures logo graphic
     @sprites["logo"].color = Color.white
@@ -425,7 +429,7 @@ class EliteBattle_BasicTrainerAnimations
       @sprites["ring2"].zoom_y += 0.2/self.delta if @sprites["ring2"].zoom_y < 3
       @sprites["ring2"].opacity -= 16/self.delta
       @sprites["bg2"].angle += 2/self.delta if $PokemonSystem.screensize < 2
-      pbWait(1)
+      pbWait(multFPS)
     end
     # disposes all sprites
     pbDisposeSpriteHash(@sprites)
@@ -434,7 +438,7 @@ class EliteBattle_BasicTrainerAnimations
       @viewport.color.red -= (255/8.0)/self.delta
       @viewport.color.green -= (255/8.0)/self.delta
       @viewport.color.blue -= (255/8.0)/self.delta
-      pbWait(1)
+      pbWait(multFPS)
     end
     @viewport.color = Color.black
     EliteBattle.set(:colorAlpha, 255)
@@ -444,12 +448,13 @@ class EliteBattle_BasicTrainerAnimations
   # plays Team Skull styled intro animation
   #-----------------------------------------------------------------------------
   def teamSkull(viewport = nil, trainerid = -1)
+    multFPS = 1/Graphics.frame_rate
     @viewport = viewport if !@viewport && !viewport.nil?
     # set up initial variables
     @sprites = {} if !@sprites
     @fpIndex = 0
     @spIndex = 0
-    pbWait(4)
+    pbWait(multFPS * 4)
     # get list of required graphics
     bitmaps = [
       "Graphics/EBDX/Transitions/Skull/background",

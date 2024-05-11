@@ -69,6 +69,7 @@ class EliteBattle_BasicWildAnimations
   #  special animation for Regis
   #-----------------------------------------------------------------------------
   def animRegi
+    multFPS = 1/Graphics.frame_rate
     fp = {}
     # gets main index
     index = self.regiIndex?
@@ -113,7 +114,7 @@ class EliteBattle_BasicWildAnimations
     # fades to black
     8.delta_add.times do
       fp["back"].opacity += 32/self.delta
-      pbWait(1)
+      pbWait(multFPS)
     end
     fp["back"].opacity = 255
     k = -2
@@ -131,12 +132,12 @@ class EliteBattle_BasicWildAnimations
         fp[j].visible = fp[j+7].opacity < 255
       end
       fp["back"].color.alpha += [1, 2/self.delta].max if fp["back"].color.alpha < 255
-      pbWait(1)
+      pbWait(multFPS)
     end
     # fades viewport to black
     8.delta_add.times do
       @viewport.color.alpha += 32/self.delta
-      pbWait(1)
+      pbWait(multFPS)
     end
     @viewport.color.alpha = 255
     # disposes unused sprites
@@ -147,6 +148,7 @@ class EliteBattle_BasicWildAnimations
   #  wild animation for outdoor battles
   #-----------------------------------------------------------------------------
   def outdoor(variant = false)
+    multFPS = 1/Graphics.frame_rate
     # gets screen size
     hz = 8
     vz = 6
@@ -189,7 +191,7 @@ class EliteBattle_BasicWildAnimations
           sps[j].zoom_x += 0.15/self.delta if sps[j].zoom_x < 1
         end
       end
-      pbWait(1)
+      pbWait(multFPS)
     end
     # ensures viewport is set to black
     @viewport.color = Color.new(0, 0, 0, 255)
@@ -201,6 +203,7 @@ class EliteBattle_BasicWildAnimations
   #  wild animation for indoor battles
   #-----------------------------------------------------------------------------
   def indoor
+    multFPS = 1/Graphics.frame_rate
     # draws blank bitmap upon which to draw snaking pattern
     screen = Sprite.new(@viewport)
     screen.bitmap = Bitmap.new(@viewport.width,@viewport.height)
@@ -214,11 +217,11 @@ class EliteBattle_BasicWildAnimations
         x = (j%2 == 0) ? 0 : @viewport.width - i*(width/16).delta_sub
         screen.bitmap.fill_rect(x,j*height,i*(width/16),height,black)
       end
-      pbWait(1)
+      pbWait(multFPS)
     end
     # ensures viewport is black
     @viewport.color = Color.new(0, 0, 0, 255)
-    pbWait(10)
+    pbWait(multFPS * 10)
     # disposes unused sprite
     screen.dispose
     return true
@@ -227,6 +230,7 @@ class EliteBattle_BasicWildAnimations
   #  wild animation for cave battles
   #-----------------------------------------------------------------------------
   def cave
+    multFPS = 1/Graphics.frame_rate
     # draws blank bitmap upon which to draw snaking pattern
     screen = Sprite.new(@viewport)
     screen.bitmap = Bitmap.new(@viewport.width,@viewport.height)
@@ -257,7 +261,7 @@ class EliteBattle_BasicWildAnimations
           sprites[n].zoom_x += 0.2/self.delta
           sprites[n].zoom_y += 0.2/self.delta
         end
-        pbWait(1)
+        pbWait(multFPS)
       end
       for j in 0...seq[i].length
         n = seq[i][j]
@@ -266,7 +270,7 @@ class EliteBattle_BasicWildAnimations
     end
     # ensures viewport is black
     @viewport.color = Color.new(0, 0, 0, 255)
-    pbWait(1)
+    pbWait(multFPS)
     # disposes unused sprites
     pbDisposeSpriteHash(sprites)
     screen.dispose
@@ -276,6 +280,7 @@ class EliteBattle_BasicWildAnimations
   #  wild animation for water encounters
   #-----------------------------------------------------------------------------
   def water
+    multFPS = 1/Graphics.frame_rate
     # gets snapshot of screen
     bmp = Graphics.snap_to_bitmap
     split = 12
@@ -303,7 +308,7 @@ class EliteBattle_BasicWildAnimations
         sprites[i].x = @viewport.width/2 + 16*o if f >= i*self.delta
         sprites[i].color.alpha += 25.5/self.delta if sprites[i].color.alpha < 255 && f >= (64 - (48-i))
       end
-      pbWait(1)
+      pbWait(multFPS)
     end
     # ensures viewport is black
     @viewport.color = Color.new(0, 0, 0, 255)
@@ -315,6 +320,7 @@ class EliteBattle_BasicWildAnimations
   #  wild animation for minor legendaries
   #-----------------------------------------------------------------------------
   def minorLegendary(special = false)
+    multFPS = 1/Graphics.frame_rate
     # initial metrics
     bmp = Graphics.snap_to_bitmap
     max = 50
@@ -326,7 +332,7 @@ class EliteBattle_BasicWildAnimations
     # animates initial viewport color
     20.delta_add.times do
       @viewport.color.alpha += [1, 2/self.delta].max
-      pbWait(1)
+      pbWait(multFPS)
     end
     @viewport.color.alpha = 40
     # animates screen blur pattern
@@ -356,17 +362,17 @@ class EliteBattle_BasicWildAnimations
           @viewport.color.blue += 5/self.delta if @viewport.color.blue < 255
         end
       end
-      pbWait(1)
+      pbWait(multFPS)
     end
     # ensures viewport goes to black
     frames[(max+19).delta_add].tone = Tone.new(255, 255, 255)
-    pbWait(10.delta_add)
+    pbWait(10.delta_add/Graphics.frame_rate)
     10.delta_add.times do
       next if special
       @viewport.color.red -= 25.5/self.delta
       @viewport.color.green -= 25.5/self.delta
       @viewport.color.blue -= 25.5/self.delta
-      pbWait(1)
+      pbWait(multFPS)
     end
     @viewport.color = Color.new(0, 0, 0)
     # disposes unused sprites
@@ -377,6 +383,7 @@ class EliteBattle_BasicWildAnimations
   #  animation for B/W legendaries
   #-----------------------------------------------------------------------------
   def bwLegendary(special = false)
+    multFPS = 1/Graphics.frame_rate
     bmp = pbBitmap("Graphics/EBDX/Transitions/Common/zoomStreak")
     n = 10
     sprites = {}
@@ -426,7 +433,7 @@ class EliteBattle_BasicWildAnimations
         sprites["sp"].opacity += 32/self.delta
       end
       sprites["bg"].opacity += 16/self.delta
-      pbWait(1)
+      pbWait(multFPS)
     end
     # dispose
     pbDisposeSpriteHash(sprites)
@@ -436,6 +443,7 @@ class EliteBattle_BasicWildAnimations
   #  animation for B/W legendaries
   #-----------------------------------------------------------------------------
   def bwLegendary2
+    multFPS = 1/Graphics.frame_rate
     sprites = {}
     # generate black backdrop
     sprites["bg"] = Sprite.new(@viewport)
@@ -462,21 +470,21 @@ class EliteBattle_BasicWildAnimations
     4.delta_add.times do
       sprites["bg"].opacity += 64/self.delta
       sprites["bar"].x += (@viewport.width/4)/self.delta
-      pbWait(1)
+      pbWait(multFPS)
     end
     sprites["bar"].x = 0
     # animate bar out
     8.delta_add.times do
       sprites["bar"].zoom_y -= 0.125/self.delta
       sprites["bar"].opacity -= 8/self.delta
-      pbWait(1)
+      pbWait(multFPS)
     end
     sprites["bar"].zoom_y = 0
     # animate spark
     for i in 0...8.delta_add
       sprites["s1"].zoom += (i < 4.delta_add ? 0.25 : -0.25)/self.delta
       sprites["s1"].angle += 8/self.delta
-      pbWait(1)
+      pbWait(multFPS)
     end
     sprites["s1"].zoom = 0
     # animate full shine
@@ -506,6 +514,7 @@ class EliteBattle_BasicWildAnimations
   #  wild animation for Pokemon that are higher level than your party leader
   #-----------------------------------------------------------------------------
   def overlevel
+    multFPS = 1/Graphics.frame_rate
     # gets screen size
     height = @viewport.height/4
     width = @viewport.width/10
@@ -521,14 +530,14 @@ class EliteBattle_BasicWildAnimations
       for i in 1..10.delta_add
         sprite.bitmap.fill_rect(0, height*y[j], width*i/self.delta, height, Color.white)
         backdrop.tone.all += 3/self.delta
-        pbWait(1)
+        pbWait(multFPS)
       end
     end
     # ensures viewport is black
     @viewport.color = Color.new(0, 0, 0, 0)
     10.delta_add.times do
       @viewport.color.alpha += 25.5/self.delta
-      pbWait(1)
+      pbWait(multFPS)
     end
     @viewport.color.alpha = 255
     # disposes unused sprites
