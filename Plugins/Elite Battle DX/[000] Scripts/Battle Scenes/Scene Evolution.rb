@@ -88,7 +88,9 @@ class PokemonEvolutionScene
     @viewport.z = 99999
     @viewport.color = Color.new(0,0,0,0)
     # initial fading transition
-    16.times { @viewport.color.alpha += 16; pbWait(1/Graphics.frame_rate) }
+    multFPS = 8/Graphics.frame_rate
+    multFPS = 0.01 if multFPS <= 0
+    16.times { @viewport.color.alpha += 16; pbWait(multFPS) }
     # initializes bars for cutting the screen off
     @sprites["bar1"] = Sprite.new(@viewport)
     @sprites["bar1"].create_rect(@viewport.width,@viewport.height/2,Color.black)

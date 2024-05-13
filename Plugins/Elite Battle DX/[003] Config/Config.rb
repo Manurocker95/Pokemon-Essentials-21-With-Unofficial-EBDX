@@ -89,6 +89,9 @@ module EliteBattle
 
   # If true, it always check the species count in GameData. If the full count is detected to be less than expected, it reinitilize the pokemon species list.
   TRY_TO_ALWAYS_INITIALIZE = true
+
+  # As EBDX uses custom intros, setting this to false will use default Essentials intros
+  USE_EBDX_BATTLE_INTROS = true
 end
 #-------------------------------------------------------------------------------
 # Adds additional "camera" vectors for when the camera is idling

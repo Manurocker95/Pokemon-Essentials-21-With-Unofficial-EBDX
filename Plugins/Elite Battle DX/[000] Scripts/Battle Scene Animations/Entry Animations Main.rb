@@ -6,6 +6,20 @@ def pbBattleAnimation(bgm = nil, battletype = 0, foe = nil)
   $game_temp.in_battle = true
   viewport = Viewport.new(0, 0, Graphics.width, Graphics.height)
   viewport.z = 99999
+   
+  multFPS = 1/Graphics.frame_rate
+  multFPS = 0.01 if multFPS <= 0
+  # flashes viewport to gray a few times.
+   viewport.color = Color.white
+   2.times do
+     viewport.color.alpha = 0
+     for i in 0...16.delta_add
+       viewport.color.alpha += (32 * (i < 8.delta_add ? 1 : -1)).delta_sub(false)
+       pbWait(multFPS)
+     end
+   end
+   viewport.color.alpha = 0
+
   # Set up audio
   playingBGS = nil
   playingBGM = nil
@@ -52,26 +66,27 @@ def pbBattleAnimation(bgm = nil, battletype = 0, foe = nil)
     break
   end
   
+if EliteBattle::USE_EBDX_BATTLE_INTROS
   # checks if the Sun & Moon styled VS sequence is to be played
   EliteBattle.sun_moon_transition?(trainerid, false, (foe[0].name rescue 0), (foe[0].partyID rescue 0)) if trainerid && foe && foe.length < 2
   EliteBattle.sun_moon_transition?(EliteBattle.get(:wildSpecies), true, EliteBattle.get(:wildForm)) if !trainerid
 
   if !handled
     # plays custom transition if applicable
-    handled = EliteBattle.play_next_transition(viewport, trainerid)
+    handled = EliteBattle.play_next_transition(viewport, trainerid) 
     
     # plays basic trainer intro animation
     if !handled && trainerid
       handled = EliteBattle_BasicTrainerAnimations.new(viewport, battletype, foe)
     end
-    
+
     # plays custom transition
     if !handled
       handled = EliteBattle_BasicWildAnimations.new(viewport)
     end
   end  
+end
 
- 
   # Default battle intro animation
   if !handled
     # Determine which animation is played
@@ -143,7 +158,9 @@ def pbBattleAnimationOriginal(bgm = nil, battletype = 0, foe = nil)
   end
   # stops currently playing ME
   pbMEFade(0.25)
-  pbWait(8/Graphics.frame_rate)
+  multFPS2 = 8/Graphics.frame_rate
+  multFPS2 = 0.01 if multFPS2 <= 0
+  pbWait(multFPS2)
   pbMEStop
   # checks if battle BGM is registered for species or trainer
   mapBGM = EliteBattle.get_map_data(:BGM)

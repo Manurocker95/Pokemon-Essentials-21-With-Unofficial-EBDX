@@ -44,6 +44,7 @@ class EliteBattle_BasicTrainerAnimations
   #-----------------------------------------------------------------------------
   def anim1
     multFPS = 1/Graphics.frame_rate
+    multFPS = 0.01 if multFPS <= 0
     # load ball sprite
     ball = Sprite.new(@viewport)
     ball.bitmap = pbBitmap("Graphics/EBDX/Transitions/Common/ball")
@@ -61,7 +62,9 @@ class EliteBattle_BasicTrainerAnimations
     ball.zoom = 1
     # take screenshot
     bmp = Graphics.snap_to_bitmap
-    pbWait(8.delta_add/Graphics.frame_rate)
+    multFPS2 = 8.delta_add/Graphics.frame_rate
+    multFPS2 = 0.01 if multFPS2 <= 0
+    pbWait(multFPS2)
     # dispose ball sprite
     ball.dispose
     # black background
@@ -97,6 +100,7 @@ class EliteBattle_BasicTrainerAnimations
   #-----------------------------------------------------------------------------
   def anim2
     multFPS = 1/Graphics.frame_rate
+    multFPS = 0.01 if multFPS <= 0
     # take screenshot and draw black background
     bmp = Graphics.snap_to_bitmap
     black = Sprite.new(@viewport)
@@ -154,6 +158,7 @@ class EliteBattle_BasicTrainerAnimations
   #-----------------------------------------------------------------------------
   def anim3
     multFPS = 1/Graphics.frame_rate
+    multFPS = 0.01 if multFPS <= 0
     # hash to store all sprites
     balls = {}
     rects = {}
@@ -187,6 +192,7 @@ class EliteBattle_BasicTrainerAnimations
       end
       pbWait(multFPS)
     end
+    echoln "anim3"
     @viewport.color = Color.black
     # disposes unused sprites
     pbDisposeSpriteHash(balls)
@@ -273,6 +279,7 @@ class EliteBattle_BasicTrainerAnimations
   #-----------------------------------------------------------------------------
   def evilTeam(viewport = nil, trainerid = -1)
     multFPS = 1/Graphics.frame_rate
+    multFPS = 0.01 if multFPS <= 0
     @viewport = viewport if !@viewport && !viewport.nil?
     @sprites = {} if !@sprites
     @viewport.color = Color.new(0, 0, 0, 0)
@@ -449,6 +456,7 @@ class EliteBattle_BasicTrainerAnimations
   #-----------------------------------------------------------------------------
   def teamSkull(viewport = nil, trainerid = -1)
     multFPS = 1/Graphics.frame_rate
+    multFPS = 0.01 if multFPS <= 0
     @viewport = viewport if !@viewport && !viewport.nil?
     # set up initial variables
     @sprites = {} if !@sprites
@@ -1182,6 +1190,7 @@ class ClassicVSSequence
   #  construct the necessary elements
   #-----------------------------------------------------------------------------
   def initialize(viewport, trainer)
+    echoln "classic vs sequence for trainers"
     @viewport = viewport
     @trainer = trainer
     @disposed = false

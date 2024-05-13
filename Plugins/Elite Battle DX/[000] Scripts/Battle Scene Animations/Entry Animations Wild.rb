@@ -70,6 +70,7 @@ class EliteBattle_BasicWildAnimations
   #-----------------------------------------------------------------------------
   def animRegi
     multFPS = 1/Graphics.frame_rate
+    multFPS = 0.01 if multFPS <= 0
     fp = {}
     # gets main index
     index = self.regiIndex?
@@ -149,6 +150,7 @@ class EliteBattle_BasicWildAnimations
   #-----------------------------------------------------------------------------
   def outdoor(variant = false)
     multFPS = 1/Graphics.frame_rate
+    multFPS = 0.01 if multFPS <= 0
     # gets screen size
     hz = 8
     vz = 6
@@ -204,6 +206,7 @@ class EliteBattle_BasicWildAnimations
   #-----------------------------------------------------------------------------
   def indoor
     multFPS = 1/Graphics.frame_rate
+    multFPS = 0.01 if multFPS <= 0
     # draws blank bitmap upon which to draw snaking pattern
     screen = Sprite.new(@viewport)
     screen.bitmap = Bitmap.new(@viewport.width,@viewport.height)
@@ -231,6 +234,7 @@ class EliteBattle_BasicWildAnimations
   #-----------------------------------------------------------------------------
   def cave
     multFPS = 1/Graphics.frame_rate
+    multFPS = 0.01 if multFPS <= 0
     # draws blank bitmap upon which to draw snaking pattern
     screen = Sprite.new(@viewport)
     screen.bitmap = Bitmap.new(@viewport.width,@viewport.height)
@@ -281,6 +285,7 @@ class EliteBattle_BasicWildAnimations
   #-----------------------------------------------------------------------------
   def water
     multFPS = 1/Graphics.frame_rate
+    multFPS = 0.01 if multFPS <= 0
     # gets snapshot of screen
     bmp = Graphics.snap_to_bitmap
     split = 12
@@ -321,6 +326,7 @@ class EliteBattle_BasicWildAnimations
   #-----------------------------------------------------------------------------
   def minorLegendary(special = false)
     multFPS = 1/Graphics.frame_rate
+    multFPS = 0.01 if multFPS <= 0
     # initial metrics
     bmp = Graphics.snap_to_bitmap
     max = 50
@@ -366,7 +372,9 @@ class EliteBattle_BasicWildAnimations
     end
     # ensures viewport goes to black
     frames[(max+19).delta_add].tone = Tone.new(255, 255, 255)
-    pbWait(10.delta_add/Graphics.frame_rate)
+    multFPS2 = 10.delta_add/Graphics.frame_rate
+    multFPS2 = 0.01 if multFPS2 <= 0
+    pbWait(multFPS2)
     10.delta_add.times do
       next if special
       @viewport.color.red -= 25.5/self.delta
@@ -384,6 +392,7 @@ class EliteBattle_BasicWildAnimations
   #-----------------------------------------------------------------------------
   def bwLegendary(special = false)
     multFPS = 1/Graphics.frame_rate
+    multFPS = 0.01 if multFPS <= 0
     bmp = pbBitmap("Graphics/EBDX/Transitions/Common/zoomStreak")
     n = 10
     sprites = {}
@@ -444,6 +453,7 @@ class EliteBattle_BasicWildAnimations
   #-----------------------------------------------------------------------------
   def bwLegendary2
     multFPS = 1/Graphics.frame_rate
+    multFPS = 0.01 if multFPS <= 0
     sprites = {}
     # generate black backdrop
     sprites["bg"] = Sprite.new(@viewport)
@@ -515,6 +525,7 @@ class EliteBattle_BasicWildAnimations
   #-----------------------------------------------------------------------------
   def overlevel
     multFPS = 1/Graphics.frame_rate
+    multFPS = 0.01 if multFPS <= 0
     # gets screen size
     height = @viewport.height/4
     width = @viewport.width/10
