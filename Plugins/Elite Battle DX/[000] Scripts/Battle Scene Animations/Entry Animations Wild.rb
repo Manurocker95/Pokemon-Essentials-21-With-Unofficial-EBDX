@@ -34,7 +34,7 @@ class EliteBattle_BasicWildAnimations
   
   def pbExtraChecks
     # animation selection processing for regular battles
-    if (!@level.nil? && @level > $player.party[0].level)
+    if (!@level.nil? && $player && !($player.party[0].is_a?(Pokemon)) && @level > $player.party[0].level)
       return self.overlevel
     elsif ($PokemonGlobal && ($PokemonGlobal.surfing || $PokemonGlobal.diving || $PokemonGlobal.fishing))
       return self.water

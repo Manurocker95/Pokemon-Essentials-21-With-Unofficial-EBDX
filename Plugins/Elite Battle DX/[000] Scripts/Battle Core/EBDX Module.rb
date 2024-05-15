@@ -318,6 +318,7 @@ module EliteBattle
       end
       str = poke ? "species" : "trainer"
       id = id[0] if id.is_a?(Array)
+      id = id.species if poke && id.is_a?(Pokemon)
       custom_id = poke ? GetSpeciesIndex(GameData::Species.get(id).id) : GetTrainerID(GameData::TrainerType.get(id).id)
       sym = poke ? GameData::Species.get(id).id : GameData::TrainerType.get(id).id
       if !pbResolveBitmap(sprintf("Graphics/EBDX/Transitions/%s", sym)) && !pbResolveBitmap(sprintf("Graphics/EBDX/Transitions/%s_%d", sym, (poke && variant) ? variant : 0))
