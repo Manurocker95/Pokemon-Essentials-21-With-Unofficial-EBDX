@@ -122,27 +122,33 @@ class Battle::Scene
   #  scene wait with animation
   #-----------------------------------------------------------------------------
   def wait(frames = 1, align = false, &block)
+    frames = Graphics.frame_rate if frames < 1 && frames > 0
     mult = Graphics.frame_rate/EliteBattle::DEFAULT_FRAMERATE 
     frames = frames * mult
-    if EliteBattle::USE_DELTA_TIME_HOTFIX
-      duration = frames / Graphics.frame_rate
-      duration = 0.01 if duration <= 0
-      pbWaitFix(duration) do |deltaTime|
-        # do sth
+
+    if EliteBattle::USE_DELTA_TIME_HOTFIX && EliteBattle::USE_DELTA_TIME_IN_CAMERA
+      if frames <= 0
         animateScene(align, &block)
         Graphics.update if !EliteBattle.get(:smAnim)
+      else  
+        duration = frames / Graphics.frame_rate
+        duration = 0.01 if duration <= 0
+        pbWaitFix(duration, align, &block)
       end 
     else
       wait_old(frames, align, &block)
     end
   end
 
-  def pbWaitFix(duration)
+  # duration is in seconds
+  def pbWaitFix(duration, align = false, &block)
     timer_start = System.uptime
     until System.uptime - timer_start >= duration
-      yield System.uptime - timer_start if block_given?
+      animateScene(align, &block)
+      Graphics.update if !EliteBattle.get(:smAnim)
     end
   end
+
 
   def wait_old(frames = 1, align = false, &block)
     frames_to_wait = frames.to_i
