@@ -100,7 +100,7 @@ module PluginManager
     # go through the plugins folder
     for dir in Dir.get("Plugins")
       next if !Dir.safe?(dir)
-      next if !safeExists?(dir + "/meta.txt")
+      next if !FileTest.exist?(dir + "/meta.txt")
       # read meta
       meta = self.readMeta(dir, "meta.txt")
       return dir if meta[:name] == plugin
@@ -709,7 +709,7 @@ class Bitmap
   def self.online_bitmap(url)
     fname = url.split("/")[-1]
     pbDownloadToFile(url, fname)
-    return nil if !safeExists?(fname)
+    return nil if !FileTest.exist?(fname)
     bmp = pbBitmap(fname)
     File.delete(fname)
     return bmp
@@ -1247,7 +1247,7 @@ module Env
   #-----------------------------------------------------------------------------
   def self.interpret(filename)
     # failsafe
-    return {} if !safeExists?(filename)
+    return {} if !FileTest.exist?(filename)
     # read file
     contents = File.open(filename, 'rb') {|f| f.read.gsub("\t", "  ") }
     # begin interpretation

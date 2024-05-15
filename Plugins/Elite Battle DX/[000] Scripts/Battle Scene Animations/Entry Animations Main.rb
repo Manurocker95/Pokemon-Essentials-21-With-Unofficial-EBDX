@@ -180,11 +180,13 @@ def pbBattleAnimationOriginal(bgm = nil, battletype = 0, foe = nil)
   viewport.z = 99999
   # flashes viewport to gray a few times.
   viewport.color = Color.white
+  multFPS =1/Graphics.frame_rate
+  multFPS = 0.01 if multFPS <= 0
   2.times do
     viewport.color.alpha = 0
     for i in 0...16.delta_add
       viewport.color.alpha += (32 * (i < 8.delta_add ? 1 : -1)).delta_sub(false)
-      pbWait(1/Graphics.frame_rate)
+      pbWait(multFPS)
     end
   end
   viewport.color.alpha = 0
