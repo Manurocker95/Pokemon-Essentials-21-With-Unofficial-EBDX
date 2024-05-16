@@ -126,13 +126,13 @@ class Battle::Scene
     mult = Graphics.frame_rate/EliteBattle::DEFAULT_FRAMERATE 
     frames = frames * mult
 
-    if EliteBattle::USE_DELTA_TIME_HOTFIX && EliteBattle::USE_DELTA_TIME_IN_CAMERA
-      if frames <= 0
-        animateScene(align, &block)
-        Graphics.update if !EliteBattle.get(:smAnim)
+    if EliteBattle::USE_DELTA_TIME_HOTFIX
+      if frames <= 1
+        wait_old(frames, align, &block)
       else  
-        duration = frames / Graphics.frame_rate
+        duration = frames.to_f / Graphics.frame_rate
         duration = 0.01 if duration <= 0
+        
         pbWaitFix(duration, align, &block)
       end 
     else

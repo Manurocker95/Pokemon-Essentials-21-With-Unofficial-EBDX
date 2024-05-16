@@ -1389,7 +1389,7 @@ class ClassicVSSequence
         self.update
         Graphics.update
       else 
-        duration = frames / Graphics.frame_rate
+        duration = frames.to_f / Graphics.frame_rate
         duration = 0.01 if duration <= 0
         pbWaitFix(duration)
       end
