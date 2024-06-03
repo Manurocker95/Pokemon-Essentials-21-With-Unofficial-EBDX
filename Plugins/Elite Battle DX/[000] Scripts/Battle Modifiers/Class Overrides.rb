@@ -169,7 +169,7 @@ class Battle
     end
     @scene.pbThrow(ball, 0, false, battler.index, showplayer)
     pbDisplay(_INTL("{1} doesn't appear to be catchable!", battler.name))
-    BallHandlers.onFailCatch(ball, self, battler)
+    Battle::PokeBallEffects.onFailCatch(ball, self, battler)
   end
   #-----------------------------------------------------------------------------
 end
