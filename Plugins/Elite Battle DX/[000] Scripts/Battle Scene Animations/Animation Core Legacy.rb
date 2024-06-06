@@ -166,7 +166,7 @@ class Battle::Scene
         end
         anim = animid[0]
         animations = EliteBattle.get(:moveAnimations)
-        name = GameData::Move.get(moveid).real_name
+        name = GameData::Move.get(moveid).name
         pbSaveShadows {
            if animid[1] # On opposing side and using OppMove animation
              pbAnimationCore(animations[anim], target, user, true)

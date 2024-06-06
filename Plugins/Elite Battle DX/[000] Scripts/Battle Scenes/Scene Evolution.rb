@@ -396,8 +396,8 @@ class PokemonEvolutionScene
     pbMEPlay("EBDX/Capture Success")
     pbBGMPlay("EBDX/Victory Against Wild")
     # gets info of the new species
-    newspeciesname = GameData::Species.get(@newspecies).real_name
-    oldspeciesname = GameData::Species.get(@pokemon.species).real_name
+    newspeciesname = GameData::Species.get(@newspecies).name
+    oldspeciesname = GameData::Species.get(@pokemon.species).name
     @sprites["msgwindow"].visible = true
     pbMessageDisplay(@sprites["msgwindow"], _INTL("\\se[]Congratulations! Your {1} evolved into {2}!\\wt[80]", @pokemon.name, newspeciesname)) { self.update }
     @sprites["msgwindow"].text = ""

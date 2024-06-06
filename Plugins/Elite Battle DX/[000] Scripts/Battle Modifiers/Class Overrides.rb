@@ -162,7 +162,7 @@ class Battle
     battler = nil
     battler = opposes?(idxPokemon) ? self.battlers[idxPokemon] : self.battlers[idxPokemon].pbOppositeOpposing
     battler = battler.pbPartner if battler.fainted?
-    pbDisplayBrief(_INTL("{1} threw one {2}!", self.pbPlayer.name, GameData::Item.get(ball).real_name))
+    pbDisplayBrief(_INTL("{1} threw one {2}!", self.pbPlayer.name, GameData::Item.get(ball).name))
     if battler.fainted?
       pbDisplay(_INTL("But there was no target..."))
       return

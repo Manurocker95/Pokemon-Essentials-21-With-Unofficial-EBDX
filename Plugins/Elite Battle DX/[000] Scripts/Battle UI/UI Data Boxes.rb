@@ -260,7 +260,11 @@ class DataBoxEBDX  <  SpriteWrapper
     @sprites["base"].mirror = @playerpoke
 
     @sprites["status"] = Sprite.new(@viewport)
-    @sprites["status"].bitmap = pbBitmap(@path + "status")
+
+    lang = pbGetSelectedLanguage
+    statusBitmapPath = pbResolveBitmap(@path + "status_"+lang)
+    @sprites["status"].bitmap = statusBitmapPath ? pbBitmap(statusBitmapPath) : pbBitmap(@path + "status")
+
     @sprites["status"].z = self.getMetric("status", :z)
     @sprites["status"].src_rect.height /= 5
     @sprites["status"].src_rect.width = 0

@@ -248,3 +248,7 @@ module GameData
     end
   end
 end
+#------------------------------------------------------------------------------------
+def pbGetSelectedLanguage
+  return Settings::LANGUAGES[$PokemonSystem.language][1]
+end  

@@ -317,7 +317,7 @@ class Battle::Scene
       # failsafe to check whether stat raise can be applied
       next if stat.nil? || (!data[:STAT_RAISE][i+1] && !data[:STAT_RAISE][i+1].is_a?(Numeric))
       # gets proper id and value for stat raise
-      s = GameData::Stat.get(stat).real_name if data[:STAT_RAISE].length <= 2
+      s = GameData::Stat.get(stat).name if data[:STAT_RAISE].length <= 2
       inc = data[:STAT_RAISE][i+1]; avg += inc
       # applies stat raise
       battler.pbRaiseStatStageBasic(stat, inc)

@@ -50,6 +50,7 @@ class BagWindowEBDX
     @confirmImg = "itemConfirm"
     @cancelImg = "itemCancel"
     @iconsImg = "pocketIcons"
+
     # looks up next cached metrics first
     d1 = EliteBattle.get(:nextUI)
     d1 = d1[:BAGMENU] if !d1.nil? && d1.has_key?(:BAGMENU)
@@ -93,6 +94,7 @@ class BagWindowEBDX
     @ret = nil; @path = "Graphics/EBDX/Pictures/Bag/"
     @baseColor = Color.new(96, 96, 96)
     @shadowColor = nil
+    @language = pbGetSelectedLanguage
     # configure viewport
     @viewport = Viewport.new(0, 0, viewport.width, viewport.height)
     @viewport.z = viewport.z + 5
@@ -119,7 +121,8 @@ class BagWindowEBDX
     bmp.dispose
     # pocket bitmap
     pbmp = pbBitmap(@path + @cmdImg)
-    ibmp = pbBitmap(@path + @iconsImg)
+    ibmp2 = pbResolveBitmap(@path + @iconsImg + "_" + @language)
+    ibmp = ibmp2 ? pbBitmap(ibmp2) : pbBitmap(@path + @iconsImg)
     # item pocket buttons
     for i in 0...4
       @sprites["pocket#{i}"] = Sprite.new(@viewport)
@@ -132,9 +135,11 @@ class BagWindowEBDX
     end
     pbmp.dispose
     ibmp.dispose
+    langMult = "_"+@language
     # last used item sprite
     @sprites["pocket4"] = Sprite.new(@viewport)
-    bmp = pbBitmap(@path + @lastImg)
+    itemLastPath = pbResolveBitmap(@path + @lastImg+langMult)
+    bmp = itemLastPath ? pbBitmap(itemLastPath):pbBitmap(@path + @lastImg)
     @sprites["pocket4"].bitmap = Bitmap.new(bmp.width, bmp.height/2)
     pbSetSystemFont(@sprites["pocket4"].bitmap)
     @sprites["pocket4"].x = 24
@@ -144,20 +149,23 @@ class BagWindowEBDX
     self.refresh(true)
     # back button sprite
     @sprites["pocket5"] = Sprite.new(@viewport)
-    @sprites["pocket5"].bitmap = pbBitmap(@path + @backImg)
+    itemBackPath = pbResolveBitmap(@path + @backImg+langMult)
+    @sprites["pocket5"].bitmap = itemBackPath ? pbBitmap(itemBackPath) : pbBitmap(@path + @backImg)
     @sprites["pocket5"].x = @viewport.width - @sprites["pocket5"].width - 16
     @sprites["pocket5"].ey = @viewport.height - 60
     @sprites["pocket5"].y = @sprites["pocket4"].ey + 80
     @sprites["pocket5"].z = 5
     # confirmation buttons
     @sprites["confirm"] = Sprite.new(@viewport)
-    bmp = pbBitmap(@path + @confirmImg)
+    itemConfirmPath = pbResolveBitmap(@path + @confirmImg+langMult)
+    bmp = itemConfirmPath ? pbBitmap(itemConfirmPath):pbBitmap(@path + @confirmImg)
     @sprites["confirm"].bitmap = Bitmap.new(bmp.width, bmp.height)
     pbSetSmallFont(@sprites["confirm"].bitmap); bmp.dispose
     @sprites["confirm"].center!
     @sprites["confirm"].x = @viewport.width/2 - @viewport.width + @viewport.width%8
     @sprites["cancel"] = Sprite.new(@viewport)
-    @sprites["cancel"].bitmap = pbBitmap(@path + @cancelImg)
+    itemCancelPath = pbResolveBitmap(@path + @cancelImg +langMult)
+    @sprites["cancel"].bitmap = itemCancelPath ? pbBitmap(itemCancelPath) : pbBitmap(@path + @cancelImg)
     @sprites["cancel"].center!
     @sprites["cancel"].x = @viewport.width/2 - @viewport.width + @viewport.width%8
     # calculate y values for the confirm/cancel buttons
@@ -243,7 +251,7 @@ class BagWindowEBDX
       @items["#{i}"].bitmap.blt(pbmp.width - icon.width - (pbmp.width - ibmp.width)/2 - 4, (pbmp.height/4 - icon.height)/2, icon, icon.rect, 164); icon.dispose
       # draw texxt
       text = [
-        ["#{GameData::Item.get(@pocket[i][0]).real_name}", pbmp.width/2 - 15, 2*pbmp.height/64, 2, @baseColor, Color.new(0, 0, 0, 32)],
+        ["#{GameData::Item.get(@pocket[i][0]).name}", pbmp.width/2 - 15, 2*pbmp.height/64, 2, @baseColor, Color.new(0, 0, 0, 32)],
         ["x#{@pocket[i][1]}", pbmp.width/2 - 12, 8*pbmp.height/64, 2, @baseColor, Color.new(0, 0, 0, 32)],
       ]
       pbDrawTextPositions(@items["#{i}"].bitmap, text)
@@ -513,7 +521,7 @@ class BagWindowEBDX
     last = @lastUsed != 0 ? EliteBattle.GetItemID(GameData::Item.get(@lastUsed).id) : 0
     # format text
     i = last > 0 ? 1 : 0
-    name = last > 0 ? GameData::Item.get(@lastUsed).real_name : ""
+    name = last > 0 ? GameData::Item.get(@lastUsed).name : ""
     text = ["", "#{name}"]
     # clean bitmap
     bmp = pbBitmap(@path + @lastImg)

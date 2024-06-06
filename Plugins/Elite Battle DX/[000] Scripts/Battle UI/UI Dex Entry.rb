@@ -18,7 +18,9 @@ class EliteBattle_Pokedex
     @pkmnbmp = pbLoadPokemonBitmap(@pokemon)
     @sprites = {}
     @disposed = false
-    @typebitmap = pbBitmap("Graphics/EBDX/Pictures/UI/types2")
+    lang = pbGetSelectedLanguage
+    typeBitmapPath = pbResolveBitmap("Graphics/EBDX/Pictures/UI/types2_"+lang)
+    @typebitmap = typeBitmapPath ? pbBitmap(typeBitmapPath) : pbBitmap("Graphics/EBDX/Pictures/UI/types2")
     self.applyMetrics
     self.drawPage
     self.drawNick
@@ -91,7 +93,7 @@ class EliteBattle_Pokedex
       indexText = sprintf("%03d", indexNumber)
     end
     # push text into array
-    textpos.push([_INTL("{1}   {2}", indexText, species_data.real_name), 262, 30, 0, base, shadow])
+    textpos.push([_INTL("{1}   {2}", indexText, species_data.name), 262, 30, 0, base, shadow])
     textpos.push([_INTL("Height"), 274, 158, 0, base, shadow])
     textpos.push([_INTL("Weight"), 274, 190, 0, base, shadow])
     # Pokemon kind

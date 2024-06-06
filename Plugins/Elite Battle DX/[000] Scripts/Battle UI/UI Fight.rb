@@ -118,7 +118,11 @@ class FightWindowEBDX
     self.applyMetrics
 
     @buttonBitmap = pbBitmap(@path + @cmdImg)
-    @typeBitmap = pbBitmap(@path + @typImg)
+
+    lang = pbGetSelectedLanguage
+    typeBitmapPath = pbResolveBitmap("Graphics/EBDX/Pictures/UI/types_"+lang)
+    @typebitmap = typeBitmapPath ? pbBitmap(typeBitmapPath) : pbBitmap("Graphics/EBDX/Pictures/UI/types")
+    
     @catBitmap = pbBitmap(@path + @catImg)
 
     @background = Sprite.new(@viewport)
@@ -161,6 +165,7 @@ class FightWindowEBDX
     @typeInd.visible = false
 
   end
+
   #-----------------------------------------------------------------------------
   #  PBS metadata
   #-----------------------------------------------------------------------------
@@ -215,12 +220,14 @@ class FightWindowEBDX
     for i in 0...4
       @y[i] += 22 if @nummoves < 3
     end
+
     @button = {}
     for i in 0...@nummoves
       # get numeric values of required variables
       movedata = GameData::Move.get(@moves[i].id)
       category = movedata.physical? ? 0 : (movedata.special? ? 1 : 2)
       type = GameData::Type.get(movedata.type).icon_position
+
       # create sprite
       @button["#{i}"] = Sprite.new(@viewport)
       @button["#{i}"].param = category
@@ -229,15 +236,16 @@ class FightWindowEBDX
       @button["#{i}"].bitmap.blt(0, 0, @buttonBitmap, Rect.new(0, type*74, 198, 74))
       @button["#{i}"].bitmap.blt(198, 0, @buttonBitmap, Rect.new(198, type*74, 198, 74))
       @button["#{i}"].bitmap.blt(65, 46, @catBitmap, Rect.new(0, category*22, 38, 22))
-      @button["#{i}"].bitmap.blt(3, 46, @typeBitmap, Rect.new(0, type*22, 72, 22))
+      @button["#{i}"].bitmap.blt(3, 46, @typebitmap, Rect.new(0, type*22, 72, 22))
       baseColor = @buttonBitmap.get_pixel(5, 32 + (type*74)).darken(0.4)
       pbSetSmallFont(@button["#{i}"].bitmap)
-      pbDrawOutlineText(@button["#{i}"].bitmap, 198, 10, 196, 42,"#{movedata.real_name}", Color.white, baseColor, 1)
+
+      pbDrawOutlineText(@button["#{i}"].bitmap, 198, 10, 196, 42,"#{movedata.name}", Color.white, baseColor, 1)
       pp = "#{@moves[i].pp}/#{movedata.total_pp}"
       pbDrawOutlineText(@button["#{i}"].bitmap, 0, 48, 191, 26, pp, Color.white, baseColor, 2)
       pbSetSystemFont(@button["#{i}"].bitmap)
       selectedMoveNameYPos = 18
-      text = [[movedata.real_name, 99, selectedMoveNameYPos, 2, baseColor, Color.new(0, 0, 0, 24)]]
+      text = [[movedata.name, 99, selectedMoveNameYPos, 2, baseColor, Color.new(0, 0, 0, 24)]]
       pbDrawTextPositions(@button["#{i}"].bitmap, text)
       @button["#{i}"].src_rect.set(198, 0, 198, 74)
       @button["#{i}"].ox = @button["#{i}"].src_rect.width/2

@@ -8,7 +8,7 @@ class Battle::Scene
   def pbShowAbilitySplash(battler = nil, ability = nil)
     # gets the info parameters
     return if battler.nil? || !Battle::Scene::USE_ABILITY_SPLASH
-    effect = (ability.is_a?(String)) ? ability : GameData::Ability.get(battler.ability).real_name
+    effect = (ability.is_a?(String)) ? ability : GameData::Ability.get(battler.ability).name
     # constructs necessary bitmap
     bitmap = pbBitmap("Graphics/EBDX/Pictures/UI/abilityMessage")
     rect = playerBattler?(battler) ? Rect.new(0, bitmap.height/2, bitmap.width, bitmap.height/2) : Rect.new(0, 0, bitmap.width, bitmap.height/2)
