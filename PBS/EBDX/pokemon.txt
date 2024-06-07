@@ -5593,8 +5593,8 @@ BattleVS                = eliteSM
 BattlerAltitude         = 10
 BattlerPlayerX          = -71
 BattlerPlayerY          = 47
-BattleEnv               = DARKNESS
 BattlerEnemyX           = 0
+BattleEnv               = DARKNESS
 #-------------------------------
 [SHAYMIN,1]
 BattlerEnemyY           = 14
@@ -10013,12 +10013,12 @@ BattlerPlayerY          = 0
 BattlerEnemyX           = 0
 #-------------------------------
 [GIMMIGHOUL]
-BattlerEnemyY           = 0
+BattlerEnemyY           = 52
 InternalName            = GIMMIGHOUL
 BattlerAltitude         = 0
-BattlerPlayerX          = 0
-BattlerPlayerY          = 0
-BattlerEnemyX           = 0
+BattlerPlayerX          = -16
+BattlerPlayerY          = 46
+BattlerEnemyX           = 11
 #-------------------------------
 [GHOLDENGO]
 BattlerEnemyY           = 0
@@ -11215,6 +11215,254 @@ BattlerEnemyX           = 0
 [GIMMIGHOUL,1]
 BattlerEnemyY           = 0
 InternalName            = GIMMIGHOUL
+BattlerAltitude         = 0
+BattlerPlayerX          = 0
+BattlerPlayerY          = 0
+BattlerEnemyX           = 0
+#-------------------------------
+[URSALUNA,1]
+BattlerEnemyY           = 0
+InternalName            = URSALUNA
+BattlerAltitude         = 0
+BattlerPlayerX          = 0
+BattlerPlayerY          = 0
+BattlerEnemyX           = 0
+#-------------------------------
+[DIPPLIN]
+BattlerEnemyY           = 0
+InternalName            = DIPPLIN
+BattlerAltitude         = 0
+BattlerPlayerX          = 0
+BattlerPlayerY          = 0
+BattlerEnemyX           = 0
+#-------------------------------
+[POLTCHAGEIST]
+BattlerEnemyY           = 0
+InternalName            = POLTCHAGEIST
+BattlerAltitude         = 0
+BattlerPlayerX          = 0
+BattlerPlayerY          = 0
+BattlerEnemyX           = 0
+#-------------------------------
+[POLTCHAGEIST,1]
+BattlerEnemyY           = 0
+InternalName            = POLTCHAGEIST
+BattlerAltitude         = 0
+BattlerPlayerX          = 0
+BattlerPlayerY          = 0
+BattlerEnemyX           = 0
+#-------------------------------
+[SINISTCHA]
+BattlerEnemyY           = 0
+InternalName            = SINISTCHA
+BattlerAltitude         = 0
+BattlerPlayerX          = 0
+BattlerPlayerY          = 0
+BattlerEnemyX           = 0
+#-------------------------------
+[SINISTCHA,1]
+BattlerEnemyY           = 0
+InternalName            = SINISTCHA
+BattlerAltitude         = 0
+BattlerPlayerX          = 0
+BattlerPlayerY          = 0
+BattlerEnemyX           = 0
+#-------------------------------
+[OKIDOGI]
+BattlerEnemyY           = 0
+InternalName            = OKIDOGI
+BattlerAltitude         = 0
+BattlerPlayerX          = 0
+BattlerPlayerY          = 0
+BattlerEnemyX           = 0
+#-------------------------------
+[MUNKIDORI]
+BattlerEnemyY           = 0
+InternalName            = MUNKIDORI
+BattlerAltitude         = 0
+BattlerPlayerX          = 0
+BattlerPlayerY          = 0
+BattlerEnemyX           = 0
+#-------------------------------
+[FEZANDIPITI]
+BattlerEnemyY           = 0
+InternalName            = FEZANDIPITI
+BattlerAltitude         = 0
+BattlerPlayerX          = 0
+BattlerPlayerY          = 0
+BattlerEnemyX           = 0
+#-------------------------------
+[OGERPON]
+BattlerEnemyY           = 0
+InternalName            = OGERPON
+BattlerAltitude         = 0
+BattlerPlayerX          = 0
+BattlerPlayerY          = 0
+BattlerEnemyX           = 0
+#-------------------------------
+[OGERPON,1]
+BattlerEnemyY           = 0
+InternalName            = OGERPON
+BattlerAltitude         = 0
+BattlerPlayerX          = 0
+BattlerPlayerY          = 0
+BattlerEnemyX           = 0
+#-------------------------------
+[OGERPON,2]
+BattlerEnemyY           = 0
+InternalName            = OGERPON
+BattlerAltitude         = 0
+BattlerPlayerX          = 0
+BattlerPlayerY          = 0
+BattlerEnemyX           = 0
+#-------------------------------
+[OGERPON,3]
+BattlerEnemyY           = 0
+InternalName            = OGERPON
+BattlerAltitude         = 0
+BattlerPlayerX          = 0
+BattlerPlayerY          = 0
+BattlerEnemyX           = 0
+#-------------------------------
+[OGERPON,4]
+BattlerEnemyY           = 0
+InternalName            = OGERPON
+BattlerAltitude         = 0
+BattlerPlayerX          = 0
+BattlerPlayerY          = 0
+BattlerEnemyX           = 0
+#-------------------------------
+[OGERPON,5]
+BattlerEnemyY           = 0
+InternalName            = OGERPON
+BattlerAltitude         = 0
+BattlerPlayerX          = 0
+BattlerPlayerY          = 0
+BattlerEnemyX           = 0
+#-------------------------------
+[OGERPON,6]
+BattlerEnemyY           = 0
+InternalName            = OGERPON
+BattlerAltitude         = 0
+BattlerPlayerX          = 0
+BattlerPlayerY          = 0
+BattlerEnemyX           = 0
+#-------------------------------
+[OGERPON,7]
+BattlerEnemyY           = 0
+InternalName            = OGERPON
+BattlerAltitude         = 0
+BattlerPlayerX          = 0
+BattlerPlayerY          = 0
+BattlerEnemyX           = 0
+#-------------------------------
+[OGERPON,8]
+BattlerEnemyY           = 0
+InternalName            = OGERPON
+BattlerAltitude         = 0
+BattlerPlayerX          = 0
+BattlerPlayerY          = 0
+BattlerEnemyX           = 0
+#-------------------------------
+[OGERPON,9]
+BattlerEnemyY           = 0
+InternalName            = OGERPON
+BattlerAltitude         = 0
+BattlerPlayerX          = 0
+BattlerPlayerY          = 0
+BattlerEnemyX           = 0
+#-------------------------------
+[OGERPON,10]
+BattlerEnemyY           = 0
+InternalName            = OGERPON
+BattlerAltitude         = 0
+BattlerPlayerX          = 0
+BattlerPlayerY          = 0
+BattlerEnemyX           = 0
+#-------------------------------
+[OGERPON,11]
+BattlerEnemyY           = 0
+InternalName            = OGERPON
+BattlerAltitude         = 0
+BattlerPlayerX          = 0
+BattlerPlayerY          = 0
+BattlerEnemyX           = 0
+#-------------------------------
+[ARCHALUDON]
+BattlerEnemyY           = 0
+InternalName            = ARCHALUDON
+BattlerAltitude         = 0
+BattlerPlayerX          = 0
+BattlerPlayerY          = 0
+BattlerEnemyX           = 0
+#-------------------------------
+[HYDRAPPLE]
+BattlerEnemyY           = 0
+InternalName            = HYDRAPPLE
+BattlerAltitude         = 0
+BattlerPlayerX          = 0
+BattlerPlayerY          = 0
+BattlerEnemyX           = 0
+#-------------------------------
+[GOUGINGFIRE]
+BattlerEnemyY           = 0
+InternalName            = GOUGINGFIRE
+BattlerAltitude         = 0
+BattlerPlayerX          = 0
+BattlerPlayerY          = 0
+BattlerEnemyX           = 0
+#-------------------------------
+[RAGINGBOLT]
+BattlerEnemyY           = 0
+InternalName            = RAGINGBOLT
+BattlerAltitude         = 0
+BattlerPlayerX          = 0
+BattlerPlayerY          = 0
+BattlerEnemyX           = 0
+#-------------------------------
+[IRONBOULDER]
+BattlerEnemyY           = 0
+InternalName            = IRONBOULDER
+BattlerAltitude         = 0
+BattlerPlayerX          = 0
+BattlerPlayerY          = 0
+BattlerEnemyX           = 0
+#-------------------------------
+[IRONCROWN]
+BattlerEnemyY           = 0
+InternalName            = IRONCROWN
+BattlerAltitude         = 0
+BattlerPlayerX          = 0
+BattlerPlayerY          = 0
+BattlerEnemyX           = 0
+#-------------------------------
+[TERAPAGOS]
+BattlerEnemyY           = 0
+InternalName            = TERAPAGOS
+BattlerAltitude         = 0
+BattlerPlayerX          = 0
+BattlerPlayerY          = 0
+BattlerEnemyX           = 0
+#-------------------------------
+[TERAPAGOS,1]
+BattlerEnemyY           = 0
+InternalName            = TERAPAGOS
+BattlerAltitude         = 0
+BattlerPlayerX          = 0
+BattlerPlayerY          = 0
+BattlerEnemyX           = 0
+#-------------------------------
+[TERAPAGOS,2]
+BattlerEnemyY           = 0
+InternalName            = TERAPAGOS
+BattlerAltitude         = 0
+BattlerPlayerX          = 0
+BattlerPlayerY          = 0
+BattlerEnemyX           = 0
+#-------------------------------
+[PECHARUNT]
+BattlerEnemyY           = 0
+InternalName            = PECHARUNT
 BattlerAltitude         = 0
 BattlerPlayerX          = 0
 BattlerPlayerY          = 0

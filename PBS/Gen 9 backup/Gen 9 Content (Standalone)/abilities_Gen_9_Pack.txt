@@ -1,0 +1,173 @@
+﻿# See the documentation on the wiki to learn how to edit this file.
+#-------------------------------
+[ANGERSHELL]
+Name = Anger Shell
+Description = Gets a powerful boost if a hit makes its HP half or less.
+#-------------------------------
+[ARMORTAIL]
+Name = Armor Tail
+Description = Prevents opposing Pokémon from using priority moves.
+#-------------------------------
+[BEADSOFRUIN]
+Name = Beads of Ruin
+Description = Lowers the Sp. Def of all Pokémon except the user.
+#-------------------------------
+[COMMANDER]
+Name = Commander
+Description = Pairs up and commands with an active Dondozo.
+#-------------------------------
+[COSTAR]
+Name = Costar
+Description = Copies an ally's stat changes upon entry to battle.
+#-------------------------------
+[CUDCHEW]
+Name = Cud Chew
+Description = Reuses an eaten Berry at the end of the next turn.
+#-------------------------------
+[EARTHEATER]
+Name = Earth Eater
+Description = Restores HP if hit by a Ground-type move.
+#-------------------------------
+[ELECTROMORPHOSIS]
+Name = Electromorphosis
+Description = The Pokémon becomes charged upon taking damage.
+#-------------------------------
+[GOODASGOLD]
+Name = Good as Gold
+Description = The Pokémon becomes immune to status moves.
+#-------------------------------
+[GUARDDOG]
+Name = Guard Dog
+Description = Boosts Atk if intimidated and immune to being forced out.
+#-------------------------------
+[HADRONENGINE]
+Name = Hadron Engine
+Description = Turns the ground into Electric Terrain and boosts Sp. Atk.
+#-------------------------------
+[LINGERINGAROMA]
+Name = Lingering Aroma
+Description = Contact with this Pokémon spreads this Ability.
+#-------------------------------
+[MYCELIUMMIGHT]
+Name = Mycelium Might
+Description = Status moves are unimpeded by this Ability but slower to use.
+#-------------------------------
+[OPPORTUNIST]
+Name = Opportunist
+Description = Copies an opponent's stat boost during a turn.
+#-------------------------------
+[ORICHALCUMPULSE]
+Name = Orichalcum Pulse
+Description = Turns the sunlight harsh while boosing Attack.
+#-------------------------------
+[PROTOSYNTHESIS]
+Name = Protosynthesis
+Description = Boosts its best stat in harsh sunlight.
+#-------------------------------
+[PURIFYINGSALT]
+Name = Purifying Salt
+Description = Gains protection from status effects and Ghost-type moves.
+#-------------------------------
+[QUARKDRIVE]
+Name = Quark Drive
+Description = Boosts its best stat in Electric Terrain.
+#-------------------------------
+[ROCKYPAYLOAD]
+Name = Rocky Payload
+Description = Powers up Rock-type moves.
+#-------------------------------
+[SEEDSOWER]
+Name = Seed Sower
+Description = Turns the ground into Grassy Terrain upon taking damage.
+#-------------------------------
+[SHARPNESS]
+Name = Sharpness
+Description = Powers up slicing moves.
+#-------------------------------
+[SUPREMEOVERLORD]
+Name = Supreme Overlord
+Description = Boosts the power of its moves with every fainted ally.
+#-------------------------------
+[SWORDOFRUIN]
+Name = Sword of Ruin
+Description = Lowers the Defense of all Pokémon except the user.
+#-------------------------------
+[TABLETSOFRUIN]
+Name = Tablets of Ruin
+Description = Lowers the Attack of all Pokémon except the user.
+#-------------------------------
+[THERMALEXCHANGE]
+Name = Thermal Exchange
+Description = Boosts Atk when hit by a Fire-type move and prevents burns.
+#-------------------------------
+[TOXICDEBRIS]
+Name = Toxic Debris
+Description = Scatters poison spikes when hit by physical moves.
+#-------------------------------
+[VESSELOFRUIN]
+Name = Vessel of Ruin
+Description = Lowers the Sp. Atk of all Pokémon except the user.
+#-------------------------------
+[WELLBAKEDBODY]
+Name = Well-Baked Body
+Description = Fire-type moves deal no damage and sharply boost Defense.
+#-------------------------------
+[WINDPOWER]
+Name = Wind Power
+Description = The Pokémon becomes charged from taking wind damage.
+#-------------------------------
+[WINDRIDER]
+Name = Wind Rider
+Description = Boosts Attack in Tailwind or when attacked by wind moves.
+#-------------------------------
+[ZEROTOHERO]
+Name = Zero to Hero
+Description = Transforms into its Hero Form when it switches out.
+#-------------------------------
+[SUPERSWEETSYRUP]
+Name = Supersweet Syrup
+Description = Lowers the foe's evasion once per battle.
+#-------------------------------
+[HOSPITALITY]
+Name = Hospitality
+Description = Restores ally's HP a little when entering battle.
+#-------------------------------
+[TOXICCHAIN]
+Name = Toxic Chain
+Description = May badly poison targets when the user attacks.
+#-------------------------------
+[MINDSEYE]
+Name = Mind's Eye
+Description = Prevents accuracy loss. Ignores Ghost immunities.
+#-------------------------------
+[EMBODYASPECT]
+Name = Embody Aspect
+Description = The user's shining mask raises its Speed stat.
+#-------------------------------
+[EMBODYASPECT_1]
+Name = Embody Aspect
+Description = The user's shining mask raises its Sp. Def stat.
+#-------------------------------
+[EMBODYASPECT_2]
+Name = Embody Aspect
+Description = The user's shining mask raises its Attack stat.
+#-------------------------------
+[EMBODYASPECT_3]
+Name = Embody Aspect
+Description = The user's shining mask raises its Defense stat.
+#-------------------------------
+[POISONPUPPETEER]
+Name = Poison Puppeteer
+Description = Moves that inflict poison also cause confusion.
+#-------------------------------
+[TERASHIFT]
+Name = Tera Shift
+Description = Enters Terastal Form when sent out.
+#-------------------------------
+[TERASHELL]
+Name = Tera Shell
+Description = Resists all types when HP is full.
+#-------------------------------
+[TERAFORMZERO]
+Name = Teraform Zero
+Description = Eliminates all weather and terrain.

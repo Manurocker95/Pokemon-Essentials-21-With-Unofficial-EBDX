@@ -1,0 +1,1129 @@
+﻿# See the documentation on the wiki to learn how to edit this file.
+#-------------------------------
+[DIRECLAW]
+Name = Dire Claw
+Type = POISON
+Category = Physical
+Power = 80
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+FunctionCode = PoisonParalyzeOrSleepTarget
+Flags = Contact,CanProtect,CanMirrorMove
+EffectChance = 50
+Description = The user may critically hit with its ruinous claws. May also leave the target poisoned, paralyzed, or asleep.
+#-------------------------------
+[SPRINGTIDESTORM]
+Name = Springtide Storm
+Type = FAIRY
+Category = Special
+Power = 100
+Accuracy = 80
+TotalPP = 5
+Target = AllNearFoes
+FunctionCode = LowerTargetAttack1
+Flags = Wind,CanProtect,CanMirrorMove,CannotMetronome
+EffectChance = 30
+Description = The user wraps winds of fierce emotion around opponents. This may lower their Attack stats.
+#-------------------------------
+[RAGINGFURY]
+Name = Raging Fury
+Type = FIRE
+Category = Physical
+Power = 120
+Accuracy = 100
+TotalPP = 10
+Target = RandomNearFoe
+FunctionCode = MultiTurnAttackConfuseUserAtEnd
+Flags = CanProtect,CanMirrorMove,CannotMetronome
+Description = The user rampages around spewing flames for two to three turns. The user then becomes confused.
+#-------------------------------
+[WAVECRASH]
+Name = Wave Crash
+Type = WATER
+Category = Physical
+Power = 120
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = RecoilThirdOfDamageDealt
+Flags = Contact,CanProtect,CanMirrorMove
+EffectChance = 100
+Description = The user shrouds itself in water and slams into the target. This also damages the user.
+#-------------------------------
+[CHLOROBLAST]
+Name = Chloroblast
+Type = GRASS
+Category = Special
+Power = 150
+Accuracy = 95
+TotalPP = 5
+Target = NearOther
+FunctionCode = RecoilHalfOfTotalHP
+Flags = CanProtect,CanMirrorMove
+Description = The user launches its amassed chlorophyll to inflict damage on the target. This also damages the user.
+#-------------------------------
+[MOUNTAINGALE]
+Name = Mountain Gale
+Type = ICE
+Category = Physical
+Power = 100
+Accuracy = 85
+TotalPP = 10
+Target = NearOther
+FunctionCode = FlinchTarget
+Flags = CanProtect,CanMirrorMove
+EffectChance = 30
+Description = The user hurls giant chunks of ice at the target. This may also make the target flinch.
+#-------------------------------
+[HEADLONGRUSH]
+Name = Headlong Rush
+Type = GROUND
+Category = Physical
+Power = 120
+Accuracy = 100
+TotalPP = 5
+Target = NearOther
+FunctionCode = LowerUserDefSpDef1
+Flags = Contact,Punching,CanProtect,CanMirrorMove
+Description = The user rams into the target in a full-body tackle. This lowers the user’s Defense and Sp. Def stats.
+#-------------------------------
+[BARBBARRAGE]
+Name = Barb Barrage
+Type = POISON
+Category = Physical
+Power = 60
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = DoublePowerIfTargetPoisonedPoisonTarget
+Flags = CanProtect,CanMirrorMove
+EffectChance = 50
+Description = Fires toxic barbs which may poison the target. Power is doubled if the target is poisoned.
+#-------------------------------
+[ESPERWING]
+Name = Esper Wing
+Type = PSYCHIC
+Category = Special
+Power = 80
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = RaiseUserSpeed1
+Flags = CanProtect,CanMirrorMove,HighCriticalHitRate
+EffectChance = 100
+Description = The user slashes with aura-enriched wings which boosts its Speed stat. Critical hits land more easily.
+#-------------------------------
+[BITTERMALICE]
+Name = Bitter Malice
+Type = GHOST
+Category = Special
+Power = 75
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = LowerTargetAttack1
+Flags = CanProtect,CanMirrorMove
+EffectChance = 100
+Description = The user attacks the target with spine-chilling resentment. This also lowers the target’s Attack stat.
+#-------------------------------
+[TRIPLEARROWS]
+Name = Triple Arrows
+Type = FIGHTING
+Category = Physical
+Power = 90
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = LowerTargetDefense1FlinchTarget
+Flags = CanProtect,CanMirrorMove,HighCriticalHitRate
+EffectChance = 100
+Description = The user fires arrows which may lower the target’s Defense or make it flinch. Critical hits land more easily.
+#-------------------------------
+[BLEAKWINDSTORM]
+Name = Bleakwind Storm
+Type = FLYING
+Category = Special
+Power = 100
+Accuracy = 80
+TotalPP = 10
+Target = AllNearFoes
+FunctionCode = LowerTargetSpeed1AlwaysHitsInRain
+Flags = CanProtect,CanMirrorMove,Wind
+EffectChance = 30
+Description = The user attacks with cold winds that cause opposing Pokémon to tremble. This may lower their Speed stats.
+#-------------------------------
+[WILDBOLTSTORM]
+Name = Wildbolt Storm
+Type = ELECTRIC
+Category = Special
+Power = 100
+Accuracy = 80
+TotalPP = 10
+Target = AllNearFoes
+FunctionCode = ParalyzeTargetAlwaysHitsInRain
+Flags = CanProtect,CanMirrorMove,Wind
+EffectChance = 20
+Description = The user attacks opposing Pokémon with a thunderous tempest. This may also leave them paralyzed.
+#-------------------------------
+[SANDSEARSTORM]
+Name = Sandsear Storm
+Type = GROUND
+Category = Special
+Power = 100
+Accuracy = 80
+TotalPP = 10
+Target = AllNearFoes
+FunctionCode = BurnTargetAlwaysHitsInRain
+Flags = CanProtect,CanMirrorMove,Wind
+EffectChance = 20
+Description = The user wraps fierce winds and hot sand around opponents. This may leave them with a burn.
+#-------------------------------
+[LUNARBLESSING]
+Name = Lunar Blessing
+Type = PSYCHIC
+Category = Status
+Accuracy = 0
+TotalPP = 5
+Target = UserAndAllies
+FunctionCode = HealUserAndAlliesQuarterOfTotalHPCureStatus
+Description = The user is blessed by the moon, restoring HP and curing status conditions of itself and allies.
+#-------------------------------
+[PSYSHIELDBASH]
+Name = Psyshield Bash
+Type = PSYCHIC
+Category = Physical
+Power = 70
+Accuracy = 90
+TotalPP = 10
+Target = NearOther
+FunctionCode = RaiseUserDefense1
+Flags = Contact,CanProtect,CanMirrorMove
+EffectChance = 100
+Description = Cloaking itself in psychic energy, the user slams into the target. This raises the user’s Defense.
+#-------------------------------
+[POWERSHIFT]
+Name = Power Shift
+Type = NORMAL
+Category = Status
+Accuracy = 0
+TotalPP = 10
+Target = User
+FunctionCode = UserSwapBaseAtkDef
+Flags = CannotMetronome
+Description = The user swaps its Attack and Defense stats.
+#-------------------------------
+[STONEAXE]
+Name = Stone Axe
+Type = ROCK
+Category = Physical
+Power = 65
+Accuracy = 90
+TotalPP = 15
+Target = NearOther
+FunctionCode = SplintersTargetGen8AddStealthRocksGen9
+Flags = Contact,CanProtect,CanMirrorMove,Slicing
+EffectChance = 100
+Description = The user swings at the opponent with its stone axes. May leave floating rocks around the target.
+#-------------------------------
+[MYSTICALPOWER]
+Name = Mystical Power
+Type = PSYCHIC
+Category = Special
+Power = 70
+Accuracy = 90
+TotalPP = 10
+Target = NearOther
+FunctionCode = RaiseUserSpAtk1
+Flags = CanProtect,CanMirrorMove
+EffectChance = 100
+Description = The user attacks by emitting a mysterious power. This also boosts the user’s Sp. Atk stat.
+#-------------------------------
+[VICTORYDANCE]
+Name = Victory Dance
+Type = FIGHTING
+Category = Status
+Accuracy = 0
+TotalPP = 10
+Target = User
+FunctionCode = RaiseUserAtkDefSpd1
+Flags = Dance
+Description = The user performs an intense dance to usher in victory, raising its Attack, Defense, and Speed.
+#-------------------------------
+[SHELTER]
+Name = Shelter
+Type = STEEL
+Category = Status
+Accuracy = 0
+TotalPP = 10
+Target = User
+FunctionCode = RaiseUserDefense2
+Description = The user makes its skin as hard as an iron shield, sharply boosting its Defense stat.
+#-------------------------------
+[INFERNALPARADE]
+Name = Infernal Parade
+Type = GHOST
+Category = Special
+Power = 60
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+FunctionCode = DoublePowerIfTargetStatusProblemBurnTarget
+Flags = CanProtect,CanMirrorMove
+EffectChance = 30
+Description = Hurls fireballs which may cause burns. Power is doubled if the target has a status condition.
+#-------------------------------
+[CEASELESSEDGE]
+Name = Ceaseless Edge
+Type = DARK
+Category = Physical
+Power = 65
+Accuracy = 90
+TotalPP = 15
+Target = NearOther
+FunctionCode = SplintersTargetGen8AddSpikesGen9
+Flags = Contact,CanProtect,CanMirrorMove,Slicing
+EffectChance = 100
+Description = The user slashes the opponent with its shell blade. May leave spikes around the target.
+#-------------------------------
+[TAKEHEART]
+Name = Take Heart
+Type = PSYCHIC
+Category = Status
+Accuracy = 0
+TotalPP = 10
+Target = User
+FunctionCode = RaiseUserSpAtkSpDef1CureStatus
+Description = The user lifts its spirits, curing its own status conditions and boosting its Sp. Atk and Sp. Def stats.
+#-------------------------------
+[AQUACUTTER]
+Name = Aqua Cutter
+Type = WATER
+Category = Physical
+Power = 70
+Accuracy = 100
+TotalPP = 20
+Target = NearOther
+FunctionCode = None
+Flags = CanProtect,CanMirrorMove,Slicing,HighCriticalHitRate
+Description = The user expels pressurized water to cut at the target like a blade. Critical hits land more easily.
+#-------------------------------
+[AQUASTEP]
+Name = Aqua Step
+Type = WATER
+Category = Physical
+Power = 80
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = RaiseUserSpeed1
+Flags = Dance,Contact,CanProtect,CanMirrorMove
+EffectChance = 100
+Description = The user attacks the target using light and fluid dance steps. This also boosts the user’s Speed stat.
+#-------------------------------
+[ARMORCANNON]
+Name = Armor Cannon
+Type = FIRE
+Category = Special
+Power = 120
+Accuracy = 100
+TotalPP = 5
+Target = NearOther
+FunctionCode = LowerUserDefSpDef1
+Flags = CanProtect,CanMirrorMove,CannotMetronome
+EffectChance = 100
+Description = The user shoots its own armor out as blazing projectiles. This lowers the user’s Defense and Sp. Def.
+#-------------------------------
+[AXEKICK]
+Name = Axe Kick
+Type = FIGHTING
+Category = Physical
+Power = 120
+Accuracy = 90
+TotalPP = 10
+Target = NearOther
+FunctionCode = CrashDamageIfFailsConfuseTarget
+Flags = Contact,CanProtect,CanMirrorMove
+EffectChance = 30
+Description = Performs a downward kick which may confuse the target. The user takes damage if it misses.
+#-------------------------------
+[BITTERBLADE]
+Name = Bitter Blade
+Type = FIRE
+Category = Physical
+Power = 90
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = HealUserByHalfOfDamageDone
+Flags = Contact,CanProtect,Slicing,CanMirrorMove
+Description = A spiteful slashing attack. The user’s HP is restored by up to half the damage taken by the target.
+#-------------------------------
+[BLAZINGTORQUE]
+Name = Blazing Torque
+Type = FIRE
+Category = Physical
+Power = 80
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = StarmobileBurnTarget
+Flags = CanProtect,CannotMetronome
+EffectChance = 30
+Description = This move is only used by a Starmobile. It may leave the target with a burn.
+#-------------------------------
+[CHILLINGWATER]
+Name = Chilling Water
+Type = WATER
+Category = Special
+Power = 50
+Accuracy = 100
+TotalPP = 20
+Target = NearOther
+FunctionCode = LowerTargetAttack1
+Flags = CanProtect,CanMirrorMove,CannotMetronome
+EffectChance = 100
+Description = The user showers the target with frigid water. This also lowers the target's Attack stat.
+#-------------------------------
+[CHILLYRECEPTION]
+Name = Chilly Reception
+Type = ICE
+Category = Status
+Accuracy = 0
+TotalPP = 10
+Target = BothSides
+FunctionCode = SwitchOutUserStartHailWeather
+Flags = CannotMetronome
+Description = The user tells a chillingly bad joke and switches out. This summons a snowstorm lasting five turns.
+#-------------------------------
+[COLLISIONCOURSE]
+Name = Collision Course
+Type = FIGHTING
+Category = Physical
+Power = 100
+Accuracy = 100
+TotalPP = 5
+Target = NearOther
+FunctionCode = IncreasePowerSuperEffective
+Flags = Contact,CanProtect,CanMirrorMove,CannotMetronome
+Description = A massive prehistoric explosion. This move’s power is boosted more than usual if it’s a supereffective hit.
+#-------------------------------
+[COMBATTORQUE]
+Name = Combat Torque
+Type = FIGHTING
+Category = Physical
+Power = 100
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = StarmobileParalyzeTarget
+Flags = CanProtect,CannotMetronome
+EffectChance = 30
+Description = This move is only used by a Starmobile. It may paralyze the target.
+#-------------------------------
+[COMEUPPANCE]
+Name = Comeuppance
+Type = DARK
+Category = Physical
+Power = 1
+Accuracy = 100
+TotalPP = 10
+Target = None
+FunctionCode = CounterDamagePlusHalf
+Flags = Contact,CanProtect,CanMirrorMove,CannotMetronome
+Description = The user retaliates with much greater force against the opponent that last inflicted damage on it.
+#-------------------------------
+[DOODLE]
+Name = Doodle
+Type = NORMAL
+Category = Status
+Accuracy = 100
+TotalPP = 10
+Target = NearFoe
+FunctionCode = SetUserAlliesAbilityToTargetAbility
+Flags = CannotMetronome
+Description = The user captures a quick sketch, changing the Abilities of the user and its allies to the target's.
+#-------------------------------
+[DOUBLESHOCK]
+Name = Double Shock
+Type = ELECTRIC
+Category = Physical
+Power = 120
+Accuracy = 100
+TotalPP = 5
+Target = NearOther
+FunctionCode = UserLosesElectricType
+Flags = Contact,CanProtect,CanMirrorMove,CannotMetronome
+Description = The user attacks by discharging all of its electricity. The user will no longer be Electric type.
+#-------------------------------
+[ELECTRODRIFT]
+Name = Electro Drift
+Type = ELECTRIC
+Category = Special
+Power = 100
+Accuracy = 100
+TotalPP = 5
+Target = NearOther
+FunctionCode = IncreasePowerSuperEffective
+Flags = Contact,CanProtect,CanMirrorMove,CannotMetronome
+Description = A futuristic electric strike. This move’s power is boosted more than usual if it’s a supereffective hit.
+#-------------------------------
+[FILLETAWAY]
+Name = Fillet Away
+Type = NORMAL
+Category = Status
+Accuracy = 0
+TotalPP = 10
+Target = NearOther
+FunctionCode = RaiseUserAtkSpAtkSpeed2LoseHalfOfTotalHP
+Flags = CannotMetronome
+Description = The user sharply boosts its Attack, Sp. Atk, and Speed stats by using its own HP.
+#-------------------------------
+[FLOWERTRICK]
+Name = Flower Trick
+Type = GRASS
+Category = Physical
+Power = 70
+Accuracy = 0
+TotalPP = 10
+Target = NearOther
+FunctionCode = AlwaysCriticalHit
+Flags = CanProtect,CanMirrorMove
+Description = The user throws a rigged bouquet of flowers at the target, which always hits and lands a critical hit.
+#-------------------------------
+[GIGATONHAMMER]
+Name = Gigaton Hammer
+Type = STEEL
+Category = Physical
+Power = 160
+Accuracy = 100
+TotalPP = 5
+Target = NearOther
+FunctionCode = CantSelectConsecutiveTurns
+Flags = CanProtect,CanMirrorMove
+Description = The user attacks with its huge hammer. This move can’t be used twice in a row.
+#-------------------------------
+[GLAIVERUSH]
+Name = Glaive Rush
+Type = DRAGON
+Category = Physical
+Power = 120
+Accuracy = 100
+TotalPP = 5
+Target = NearOther
+FunctionCode = UserVulnerableUntilNextAction
+Flags = Contact,CanProtect,CanMirrorMove
+Description = The user becomes highly vulnerable to attacks until its next turn after using this move.
+#-------------------------------
+[HYPERDRILL]
+Name = Hyper Drill
+Type = NORMAL
+Category = Physical
+Power = 100
+Accuracy = 100
+TotalPP = 5
+Target = NearOther
+FunctionCode = None
+Flags = Contact,CanMirrorMove,CannotMetronome
+Description = The user spins the pointed part of its body at high speed to pierce the target, ignoring protections.
+#-------------------------------
+[ICESPINNER]
+Name = Ice Spinner
+Type = ICE
+Category = Physical
+Power = 80
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+FunctionCode = RemoveTerrainIceSpinner
+Flags = Contact,CanProtect,CanMirrorMove
+Description = The user spins into the target with feet covered in thin ice. This also destroys the terrain.
+#-------------------------------
+[JETPUNCH]
+Name = Jet Punch
+Type = WATER
+Category = Physical
+Power = 60
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+Priority = 1
+FunctionCode = None
+Flags = Contact,CanProtect,CanMirrorMove,CannotMetronome,Punching
+Description = The user summons a torrent around its fist and punches at blinding speed. Always goes first.
+#-------------------------------
+[KOWTOWCLEAVE]
+Name = Kowtow Cleave
+Type = DARK
+Category = Physical
+Power = 85
+Accuracy = 0
+TotalPP = 10
+Target = NearOther
+FunctionCode = None
+Flags = Slicing,Contact,CanProtect,CanMirrorMove
+Description = The user kowtows to make the target lower its guard, then slashes. This attack never misses.
+#-------------------------------
+[LASTRESPECTS]
+Name = Last Respects
+Type = GHOST
+Category = Physical
+Power = 50
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = IncreasePowerEachFaintedAlly
+Flags = CanProtect,CanMirrorMove
+Description = The user attacks to avenge its allies. The move’s power increases for each defeated ally.
+#-------------------------------
+[LUMINACRASH]
+Name = Lumina Crash
+Type = PSYCHIC
+Category = Special
+Power = 80
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = LowerTargetSpDef2
+Flags = CanProtect,CanMirrorMove
+EffectChance = 100
+Description = The user attacks by unleashing a peculiar, mind-bending light that harshly lowers the target’s Sp. Def.
+#-------------------------------
+[MAGICALTORQUE]
+Name = Magical Torque
+Type = FAIRY
+Category = Physical
+Power = 100
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = StarmobileConfuseTarget
+Flags = CanProtect,CannotMetronome
+EffectChance = 30
+Description = This move is only used by a Starmobile. It may confuse the target.
+#-------------------------------
+[MAKEITRAIN]
+Name = Make It Rain
+Type = STEEL
+Category = Special
+Power = 120
+Accuracy = 100
+TotalPP = 5
+Target = AllNearFoes
+FunctionCode = AddMoneyGainedFromBattleLowerUserSpAtk1
+Flags = CanProtect,CanMirrorMove,CannotMetronome
+Description = The user throws out a huge mass of coins, lowering its Sp. Atk stat. Money is earned after the battle.
+#-------------------------------
+[MORTALSPIN]
+Name = Mortal Spin
+Type = POISON
+Category = Physical
+Power = 30
+Accuracy = 100
+TotalPP = 15
+Target = AllNearFoes
+FunctionCode = RemoveUserBindingAndEntryHazardsPoisonTarget
+Flags = Contact,CanProtect,CanMirrorMove
+EffectChance = 100
+Description = Performs a spin that eliminates certain traps and hazards. This also poisons opposing Pokémon.
+#-------------------------------
+[NOXIOUSTORQUE]
+Name = Noxious Torque
+Type = POISON
+Category = Physical
+Power = 100
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = StarmobilePoisonTarget
+Flags = CanProtect,CannotMetronome
+EffectChance = 30
+Description = This move is only used by a Starmobile. It may poison the target.
+#-------------------------------
+[ORDERUP]
+Name = Order Up
+Type = DRAGON
+Category = Physical
+Power = 80
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = RaiseUserStat1Commander
+Flags = CanProtect,CannotMetronome
+EffectChance = 100
+Description = If used when the user has a Tatsugiri in its mouth, a boost occurs based on its form.
+#-------------------------------
+[POPULATIONBOMB]
+Name = Population Bomb
+Type = NORMAL
+Category = Physical
+Power = 20
+Accuracy = 90
+TotalPP = 10
+Target = NearOther
+FunctionCode = HitTenTimes
+Flags = Contact,CanProtect,CanMirrorMove,CannotMetronome,Slicing
+Description = The user’s fellows gather in droves to perform a combo attack that hits one to ten times in a row.
+#-------------------------------
+[POUNCE]
+Name = Pounce
+Type = BUG
+Category = Physical
+Power = 50
+Accuracy = 100
+TotalPP = 20
+Target = NearOther
+FunctionCode = LowerTargetSpeed1
+Flags = Contact,CanProtect,CanMirrorMove,CannotMetronome
+EffectChance = 100
+Description = The user attacks by pouncing on the target. This also lowers the target’s Speed stat.
+#-------------------------------
+[RAGEFIST]
+Name = Rage Fist
+Type = GHOST
+Category = Physical
+Power = 50
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = IncreasePowerEachTimeHit
+Flags = Contact,CanProtect,CanMirrorMove,CannotMetronome,Punching
+Description = The user converts its rage into energy to attack. The move’s power increases every time the user is hit.
+#-------------------------------
+[RAGINGBULL]
+Name = Raging Bull
+Type = NORMAL
+Category = Physical
+Power = 90
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = TypeIsUserSecondTypeRemoveScreens
+Flags = Contact,CanProtect,CanMirrorMove,CannotMetronome
+Description = The user charges and destroys enemy barriers. This move’s type depends on the user’s form.
+#-------------------------------
+[REVIVALBLESSING]
+Name = Revival Blessing
+Type = NORMAL
+Category = Status
+Accuracy = 0
+TotalPP = 1
+Target = User
+FunctionCode = RevivePokemonHalfHP
+Flags = CannotMetronome
+Description = The user revives a party Pokémon that has fainted and restores half their max HP.
+#-------------------------------
+[RUINATION]
+Name = Ruination
+Type = DARK
+Category = Special
+Power = 1
+Accuracy = 90
+TotalPP = 10
+Target = NearOther
+FunctionCode = FixedDamageHalfTargetHP
+Flags = CanProtect,CanMirrorMove,CannotMetronome
+Description = The user summons a ruinous disaster. This cuts the target’s HP in half.
+#-------------------------------
+[SALTCURE]
+Name = Salt Cure
+Type = ROCK
+Category = Physical
+Power = 40
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+FunctionCode = StartSaltCureTarget
+Flags = CanProtect,CanMirrorMove,CannotMetronome
+EffectChance = 100
+Description = The user salt cures the target, inflicting damage every turn. Steel and Water types take more damage.
+#-------------------------------
+[SHEDTAIL]
+Name = Shed Tail
+Type = NORMAL
+Category = Status
+Accuracy = 0
+TotalPP = 10
+Target = User
+FunctionCode = UserMakeSubstituteSwitchOut
+Flags = CannotMetronome
+Description = The user creates a substitute and switches places with a party Pokémon in waiting.
+#-------------------------------
+[SILKTRAP]
+Name = Silk Trap
+Type = BUG
+Category = Status
+Accuracy = 0
+TotalPP = 10
+Target = User
+Priority = 4
+FunctionCode = ProtectUserFromDamagingMovesSilkTrap
+Flags = CannotMetronome
+Description = User spins a silken trap to protect itself. Lowers the Speed of any that make direct contact.
+#-------------------------------
+[SNOWSCAPE]
+Name = Snowscape
+Type = ICE
+Category = Status
+Accuracy = 0
+TotalPP = 10
+Target = BothSides
+FunctionCode = StartHailWeather
+Flags = CannotMetronome
+Description = Summons a five-turn snowstorm that boosts the Defense of Ice-type Pokémon.
+#-------------------------------
+[SPICYEXTRACT]
+Name = Spicy Extract
+Type = GRASS
+Category = Status
+Accuracy = 0
+TotalPP = 15
+Target = NearOther
+FunctionCode = RaiseTargetAtkLowerTargetDef2
+Flags = CanProtect,CanMirrorMove,CannotMetronome
+Description = Emits a spicy extract which raises the target’s Attack and lowers Defense by two stages each.
+#-------------------------------
+[SPINOUT]
+Name = Spin Out
+Type = STEEL
+Category = Physical
+Power = 100
+Accuracy = 100
+TotalPP = 5
+Target = NearOther
+FunctionCode = LowerUserSpeed2
+Flags = Contact,CanProtect,CanMirrorMove
+Description = The user inflicts damage on the target with a furious spin. This harshly lowers the user’s Speed.
+#-------------------------------
+[TIDYUP]
+Name = Tidy Up
+Type = NORMAL
+Category = Status
+Accuracy = 0
+TotalPP = 10
+Target = User
+FunctionCode = RaiseUserAtkSpd1RemoveHazardsSubstitutes
+Flags = CannotMetronome
+EffectChance = 100
+Description = Clears hazards and substitutes from the field. This also boosts the user’s Attack and Speed.
+#-------------------------------
+[TORCHSONG]
+Name = Torch Song
+Type = FIRE
+Category = Special
+Power = 80
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = RaiseUserSpAtk1
+Flags = Sound,CanProtect,CanMirrorMove
+EffectChance = 100
+Description = The user blows out raging flames as if singing a song. This also boosts the user’s Sp. Atk stat.
+#-------------------------------
+[TRAILBLAZE]
+Name = Trailblaze
+Type = GRASS
+Category = Physical
+Power = 50
+Accuracy = 100
+TotalPP = 20
+Target = NearOther
+FunctionCode = RaiseUserSpeed1
+Flags = Contact,CanProtect,CanMirrorMove,CannotMetronome
+EffectChance = 100
+Description = The user attacks suddenly as if leaping out from tall grass. This boosts the user's Speed stat.
+#-------------------------------
+[TRIPLEDIVE]
+Name = Triple Dive
+Type = WATER
+Category = Physical
+Power = 30
+Accuracy = 95
+TotalPP = 10
+Target = NearOther
+FunctionCode = HitThreeTimes
+Flags = Contact,CanProtect,CanMirrorMove
+Description = The user performs a perfectly timed triple dive, hitting the target three times in a row.
+#-------------------------------
+[TWINBEAM]
+Name = Twin Beam
+Type = PSYCHIC
+Category = Special
+Power = 40
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = HitTwoTimes
+Flags = CanProtect,CanMirrorMove,CannotMetronome
+Description = The user shoots mystical beams from its eyes to inflict damage. The target is hit twice in a row.
+#-------------------------------
+[WICKEDTORQUE]
+Name = Wicked Torque
+Type = DARK
+Category = Physical
+Power = 80
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = StarmobileSleepTarget
+Flags = CanProtect,CannotMetronome
+EffectChance = 10
+Description = This move is only used by a Starmobile. It may put the target to sleep.
+#-------------------------------
+[HYDROSTEAM]
+Name = Hydro Steam
+Type = WATER
+Category = Special
+Power = 80
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+FunctionCode = IncreasePowerInSunWeather
+Flags = CanProtect,CanMirrorMove
+Description = The user blasts the target with boiling-hot water whose power is boosted in harsh sunlight.
+#-------------------------------
+[PSYBLADE]
+Name = Psyblade
+Type = PSYCHIC
+Category = Physical
+Power = 80
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+FunctionCode = IncreasePowerInElectricTerrain
+Flags = Contact,CanProtect,CanMirrorMove,Slicing
+Description = The user rends the target with an ethereal blade whose power is boosted on Electric Terrain.
+#-------------------------------
+[BLOODMOON]
+Name = Blood Moon
+Type = NORMAL
+Category = Special
+Power = 140
+Accuracy = 100
+TotalPP = 5
+Target = NearOther
+FunctionCode = CantSelectConsecutiveTurns
+Flags = CanProtect,CanMirrorMove
+Description = The user unleashes the full brunt of its spirit from a blood moon. This move can't be used twice in a row.
+#-------------------------------
+[MATCHAGOTCHA]
+Name = Matcha Gotcha
+Type = GRASS
+Category = Special
+Power = 80
+Accuracy = 90
+TotalPP = 15
+Target = AllNearFoes
+FunctionCode = HealUserByHalfOfDamageDoneBurnTarget
+Flags = CanProtect,CanMirrorMove,ThawsUser
+EffectChance = 20
+Description = Blasts opponents with hot tea. Heals the user by half the damage dealt and may also burn targets.
+#-------------------------------
+[SYRUPBOMB]
+Name = Syrup Bomb
+Type = GRASS
+Category = Special
+Power = 60
+Accuracy = 85
+TotalPP = 10
+Target = NearOther
+FunctionCode = LowerTargetSpeedOverTime
+Flags = CanProtect,CanMirrorMove,Bomb
+EffectChance = 100
+Description = An explosion of sticky candy syrup, which drop the target's Speed stat each turn for three turns.
+#-------------------------------
+[IVYCUDGEL]
+Name = Ivy Cudgel
+Type = GRASS
+Category = Physical
+Power = 100
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = TypeIsUserSecondType
+Flags = CanProtect,CanMirrorMove,HighCriticalHitRate
+Description = An ivy-wrapped cudgel strike with a high critical-hit ratio. Type changes based on the user's Mask.
+#-------------------------------
+[ELECTROSHOT]
+Name = Electro Shot
+Type = ELECTRIC
+Category = Special
+Power = 130
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = TwoTurnAttackOneTurnInRainRaiseUserSpAtk1
+Flags = CanProtect,CanMirrorMove
+EffectChance = 100
+Description = A two-turn attack. The user boosts its Sp. Atk and then fires a high-voltage shot.
+#-------------------------------
+[TERASTARSTORM]
+Name = Tera Starstorm
+Type = NORMAL
+Category = Special
+Power = 120
+Accuracy = 100
+TotalPP = 5
+Target = NearOther
+FunctionCode = TerapagosCategoryDependsOnHigherDamage
+Flags = CanProtect,CanMirrorMove,CannotMetronome
+Description = When used by Terapagos in its Stellar Form, this move damages all opposing Pokémon.
+#-------------------------------
+[FICKLEBEAM]
+Name = Fickle Beam
+Type = DRAGON
+Category = Special
+Power = 80
+Accuracy = 100
+TotalPP = 5
+Target = NearOther
+FunctionCode = RandomlyDealsDoubleDamage
+Flags = CanProtect,CanMirrorMove
+Description = Sometimes all of the user's heads shoot beams in unison, doubling this move's power.
+#-------------------------------
+[BURNINGBULWARK]
+Name = Burning Bulwark
+Type = FIRE
+Category = Status
+Accuracy = 0
+TotalPP = 10
+Target = User
+Priority = 4
+FunctionCode = ProtectUserBurningBulwark
+Description = Protects the user from attacks. Also burns any attacker that makes contact with the user.
+#-------------------------------
+[THUNDERCLAP]
+Name = Thunderclap
+Type = ELECTRIC
+Category = Special
+Power = 70
+Accuracy = 100
+TotalPP = 5
+Target = NearOther
+Priority = 1
+FunctionCode = FailsIfTargetActed
+Flags = CanProtect,CanMirrorMove
+Description = This move enables the user to attack first. It fails if the target is not readying an attack, however.
+#-------------------------------
+[MIGHTYCLEAVE]
+Name = Mighty Cleave
+Type = ROCK
+Category = Physical
+Power = 95
+Accuracy = 100
+TotalPP = 5
+Target = NearOther
+FunctionCode = None
+Flags = Contact,CanMirrorMove,Slicing
+Description = The user cleaves the target. This move hits even if the target protects itself.
+#-------------------------------
+[TACHYONCUTTER]
+Name = Tachyon Cutter
+Type = STEEL
+Category = Special
+Power = 50
+Accuracy = 0
+TotalPP = 10
+Target = NearOther
+FunctionCode = HitTwoTimes
+Flags = CanProtect,CanMirrorMove,Slicing
+Description = The user attacks by launching particle blades at the target twice in a row. This attack never misses.
+#-------------------------------
+[HARDPRESS]
+Name = Hard Press
+Type = STEEL
+Category = Physical
+Power = 1
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = PowerHigherWithTargetHP100PowerRange
+Flags = Contact,CanProtect,CanMirrorMove
+Description = The target is crushed with great force. The attack is more powerful the more HP the target has left.
+#-------------------------------
+[DRAGONCHEER]
+Name = Dragon Cheer
+Type = DRAGON
+Category = Status
+Accuracy = 0
+TotalPP = 15
+Target = AllAllies
+FunctionCode = RaiseAlliesCriticalHitRate1DragonTypes2
+Description = The user raises its allies’ critical hit ratio with a draconic cry. This rouses Dragon types more.
+#-------------------------------
+[ALLURINGVOICE]
+Name = Alluring Voice
+Type = FAIRY
+Category = Special
+Power = 80
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = ConfuseTargetIfTargetStatsRaisedThisTurn
+Flags = Sound,CanProtect,CanMirrorMove
+EffectChance = 100
+Description = Attacks using an angelic voice. This confuses the target if its stats have been raised this turn.
+#-------------------------------
+[TEMPERFLARE]
+Name = Temper Flare
+Type = FIRE
+Category = Physical
+Power = 75
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = DoublePowerIfUserLastMoveFailed
+Flags = Contact,CanProtect,CanMirrorMove
+Description = The user attacks driven by frustration. Power increases if the user's previous move failed.
+#-------------------------------
+[SUPERCELLSLAM]
+Name = Supercell Slam
+Type = ELECTRIC
+Category = Physical
+Power = 100
+Accuracy = 95
+TotalPP = 15
+Target = NearOther
+FunctionCode = CrashDamageIfFails
+Flags = Contact,CanProtect,CanMirrorMove
+Description = The user drops onto the target with its electrified body. If it misses, the user is hurt instead.
+#-------------------------------
+[PSYCHICNOISE]
+Name = Psychic Noise
+Type = PSYCHIC
+Category = Special
+Power = 75
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = DisableTargetHealingMoves2Turns
+Flags = Sound,CanProtect,CanMirrorMove
+EffectChance = 100
+Description = Attacks the target with unpleasant sound waves. Prevents the target from healing for two turns.
+#-------------------------------
+[UPPERHAND]
+Name = Upper Hand
+Type = FIGHTING
+Category = Physical
+Power = 65
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+Priority = 3
+FunctionCode = FlinchTargetFailsIfTargetNotUsingPriorityMove
+Flags = Contact,CanProtect,CanMirrorMove
+EffectChance = 100
+Description = An attack that hits first and makes the target flinch. Fails if the target isn't using a high priority move.
+#-------------------------------
+[MALIGNANTCHAIN]
+Name = Malignant Chain
+Type = POISON
+Category = Special
+Power = 100
+Accuracy = 100
+TotalPP = 5
+Target = NearOther
+FunctionCode = BadPoisonTarget
+Flags = CanProtect,CanMirrorMove
+EffectChance = 50
+Description = Wraps the target in a toxic, corrosive chain. This may also leave the target badly poisoned.

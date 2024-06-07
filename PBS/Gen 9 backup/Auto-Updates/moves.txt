@@ -1,0 +1,154 @@
+#-------------------------------
+[AERIALACE]
+Flags = Contact,CanProtect,CanMirrorMove,Slicing
+#-------------------------------
+[AIRCUTTER]
+Flags = CanProtect,CanMirrorMove,HighCriticalHitRate,Slicing,Wind
+#-------------------------------
+[AIRSLASH]
+Flags = CanProtect,CanMirrorMove,Slicing
+#-------------------------------
+[ALLYSWITCH]
+Description = The user switches places with an ally. This move's chance of failing rises if it is used in succession.
+#-------------------------------
+[BEHEMOTHBLADE]
+Flags = Contact,CanProtect,CanMirrorMove,CannotMetronome,Slicing
+#-------------------------------
+[BLIZZARD]
+Flags = CanProtect,CanMirrorMove,Wind
+#-------------------------------
+[BODYPRESS]
+Description = The user slams its body into the target. Deals more damage with a higher Defense stat.
+#-------------------------------
+[BUGBUZZ]
+Description = The user vibrates its wings to generate a sound wave. It may also lower the target's Sp. Def stat.
+#-------------------------------
+[CROSSPOISON]
+Flags = Contact,CanProtect,CanMirrorMove,HighCriticalHitRate,Slicing
+#-------------------------------
+[CUT]
+Flags = Contact,CanProtect,CanMirrorMove,Slicing
+#-------------------------------
+[FAIRYWIND]
+Flags = CanProtect,CanMirrorMove,Wind
+#-------------------------------
+[FLAREBLITZ]
+Description = The user cloaks itself in fire and charges at the foe. The user takes damage and may burn the target.
+#-------------------------------
+[FURYCUTTER]
+Flags = Contact,CanProtect,CanMirrorMove,Slicing
+#-------------------------------
+[GRASSYGLIDE]
+Power = 55
+#-------------------------------
+[GLACIALLANCE]
+Power = 120
+#-------------------------------
+[GUST]
+Flags = CanProtect,CanMirrorMove,Wind
+#-------------------------------
+[HEATWAVE]
+Flags = CanProtect,CanMirrorMove,Wind
+#-------------------------------
+[HURRICANE]
+Flags = CanProtect,CanMirrorMove,Wind
+#-------------------------------
+[ICYWIND]
+Flags = CanProtect,CanMirrorMove,Wind
+#-------------------------------
+[LEAFBLADE]
+Flags = Contact,CanProtect,CanMirrorMove,HighCriticalHitRate,Slicing
+#-------------------------------
+[LUSTERPURGE]
+Power = 95
+#-------------------------------
+[MILKDRINK]
+TotalPP = 5
+#-------------------------------
+[MISTBALL]
+Power = 95
+#-------------------------------
+[NIGHTSLASH]
+Flags = Contact,CanProtect,CanMirrorMove,HighCriticalHitRate,Slicing
+#-------------------------------
+[OMINOUSWIND]
+Flags = CanProtect,CanMirrorMove,Wind
+#-------------------------------
+[PETALBLIZZARD]
+Flags = CanProtect,CanMirrorMove,Wind
+#-------------------------------
+[PSYCHOCUT]
+Flags = CanProtect,CanMirrorMove,HighCriticalHitRate,Slicing
+#-------------------------------
+[RAZORLEAF]
+Flags = CanProtect,CanMirrorMove,HighCriticalHitRate,Slicing
+#-------------------------------
+[RAZORSHELL]
+Flags = Contact,CanProtect,CanMirrorMove,Slicing
+#-------------------------------
+[RAZORWIND]
+Flags = CanProtect,CanMirrorMove,HighCriticalHitRate,Wind
+#-------------------------------
+[RECOVER]
+TotalPP = 5
+#-------------------------------
+[REST]
+TotalPP = 5
+#-------------------------------
+[ROOST]
+TotalPP = 5
+#-------------------------------
+[SACREDSWORD]
+Flags = Contact,CanProtect,CanMirrorMove,Slicing
+#-------------------------------
+[SANDSTORM]
+Flags = Wind
+#-------------------------------
+[SECRETSWORD]
+Flags = CanProtect,CanMirrorMove,CannotMetronome,Slicing
+#-------------------------------
+[SHOREUP]
+TotalPP = 5
+#-------------------------------
+[SILVERWIND]
+Flags = CanProtect,CanMirrorMove,Wind
+#-------------------------------
+[SLACKOFF]
+TotalPP = 5
+#-------------------------------
+[SLASH]
+Flags = Contact,CanProtect,CanMirrorMove,HighCriticalHitRate,Slicing
+#-------------------------------
+[SOFTBOILED]
+TotalPP = 5
+#-------------------------------
+[SOLARBLADE]
+Flags = Contact,CanProtect,CanMirrorMove,Slicing
+#-------------------------------
+[SPARK]
+Flags = Contact,CanProtect,CanMirrorMove,ElectrocuteUser
+#-------------------------------
+[SURGINGSTRIKES]
+Flags = Contact,CanProtect,CanMirrorMove,CannotMetronome,Punching
+#-------------------------------
+[TAILWIND]
+Flags = Wind
+#-------------------------------
+[TWISTER]
+Flags = CanProtect,CanMirrorMove,Wind
+#-------------------------------
+[VOLTTACKLE]
+Flags = Contact,CanProtect,CanMirrorMove,ElectrocuteUser
+#-------------------------------
+[WHIRLWIND]
+Flags = CanMirrorMove,Wind
+#-------------------------------
+[WICKEDBLOW]
+Power = 75
+Flags = Contact,CanProtect,CanMirrorMove,CannotMetronome,Punching
+#-------------------------------
+[WILDCHARGE]
+Flags = Contact,CanProtect,CanMirrorMove,ElectrocuteUser
+#-------------------------------
+[XSCISSOR]
+Flags = Contact,CanProtect,CanMirrorMove,Slicing

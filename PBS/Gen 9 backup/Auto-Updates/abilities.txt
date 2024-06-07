@@ -1,0 +1,21 @@
+#-------------------------------
+[BATTLEBOND]
+Description = Defeating a foe powers up the user one time.
+#-------------------------------
+[DAUNTLESSSHIELD]
+Description = Boosts Defense when entering battle one time.
+#-------------------------------
+[ILLUMINATE]
+Description = Prevents other Pokémon from lowering accuracy.
+#-------------------------------
+[INTREPIDSWORD]
+Description = Boosts Attack when entering battle one time.
+#-------------------------------
+[LIBERO]
+Description = Changes type to the first selected move.
+#-------------------------------
+[PROTEAN]
+Description = Changes type to the first selected move.
+#-------------------------------
+[SNOWWARNING]
+Description = The Pokémon summons a snowstorm in battle.

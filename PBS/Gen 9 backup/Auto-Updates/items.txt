@@ -1,0 +1,960 @@
+#-------------------------------
+[ABILITYCAPSULE]
+Price = 100000
+SellPrice = 25000
+#-------------------------------
+[ABILITYPATCH]
+Price = 250000
+#-------------------------------
+[ABSORBBULB]
+Price = 5000
+SellPrice = 1250
+#-------------------------------
+[ADAMANTMINT]
+Price = 20000
+SellPrice = 5000
+#-------------------------------
+[ADRENALINEORB]
+Price = 5000
+SellPrice = 1250
+#-------------------------------
+[AGUAVBERRY]
+Price = 40
+#-------------------------------
+[AIRBALLOON]
+Price = 15000
+SellPrice = 3750
+#-------------------------------
+[AMULETCOIN]
+Price = 15000
+#-------------------------------
+[ANTIDOTE]
+SellPrice = 50
+#-------------------------------
+[APICOTBERRY]
+Price = 40
+#-------------------------------
+[ASPEARBERRY]
+Price = 40
+#-------------------------------
+[ASSAULTVEST]
+Price = 50000
+SellPrice = 12500
+#-------------------------------
+[AWAKENING]
+SellPrice = 50
+#-------------------------------
+[BABIRIBERRY]
+Price = 40
+#-------------------------------
+[BIGNUGGET]
+Flags = Fling_130
+#-------------------------------
+[BIGROOT]
+Price = 10000
+SellPrice = 2500
+#-------------------------------
+[BINDINGBAND]
+Price = 20000
+SellPrice = 5000
+#-------------------------------
+[BLACKAPRICORN]
+Price = 100
+#-------------------------------
+[BLACKBELT]
+SellPrice = 750
+#-------------------------------
+[BLACKGLASSES]
+SellPrice = 750
+#-------------------------------
+[BLACKSLUDGE]
+Price = 10000
+SellPrice = 2500
+#-------------------------------
+[BLUEAPRICORN]
+Price = 100
+#-------------------------------
+[BLUNDERPOLICY]
+Price = 30000
+SellPrice = 7500
+#-------------------------------
+[BOLDMINT]
+Price = 20000
+SellPrice = 5000
+#-------------------------------
+[BRAVEMINT]
+Price = 20000
+SellPrice = 5000
+#-------------------------------
+[BRIGHTPOWDER]
+Price = 30000
+SellPrice = 7500
+#-------------------------------
+[BURNHEAL]
+SellPrice = 50
+#-------------------------------
+[CALCIUM]
+SellPrice = 2500
+#-------------------------------
+[CALMMINT]
+Price = 20000
+SellPrice = 5000
+#-------------------------------
+[CARBOS]
+SellPrice = 2500
+#-------------------------------
+[CAREFULMINT]
+Price = 20000
+SellPrice = 5000
+#-------------------------------
+[CELLBATTERY]
+Price = 5000
+SellPrice = 1250
+#-------------------------------
+[CHARCOAL]
+SellPrice = 750
+#-------------------------------
+[CHARTIBERRY]
+Price = 40
+#-------------------------------
+[CHERIBERRY]
+Price = 40
+#-------------------------------
+[CHESTOBERRY]
+Price = 40
+#-------------------------------
+[CHILANBERRY]
+Price = 40
+#-------------------------------
+[CHIPPEDPOT]
+Price = 1500
+SellPrice = 9500
+#-------------------------------
+[CHOICEBAND]
+Price = 100000
+SellPrice = 25000
+#-------------------------------
+[CHOICESCARF]
+Price = 100000
+SellPrice = 25000
+#-------------------------------
+[CHOICESPECS]
+Price = 100000
+SellPrice = 25000
+#-------------------------------
+[CHOPLEBERRY]
+Price = 40
+#-------------------------------
+[CLEANSETAG]
+Price = 2500
+#-------------------------------
+[CLEVERFEATHER]
+Price = 150
+#-------------------------------
+[COBABERRY]
+Price = 40
+#-------------------------------
+[COLBURBERRY]
+Price = 40
+#-------------------------------
+[CRACKEDPOT]
+Price = 1500
+SellPrice = 400
+#-------------------------------
+[CUSTAPBERRY]
+Price = 40
+#-------------------------------
+[DAMPROCK]
+Price = 8000
+SellPrice = 2000
+#-------------------------------
+[DAWNSTONE]
+SellPrice = 750
+#-------------------------------
+[DESTINYKNOT]
+Price = 20000
+SellPrice = 5000
+#-------------------------------
+[DIREHIT]
+SellPrice = 250
+#-------------------------------
+[DIVEBALL]
+SellPrice = 250
+#-------------------------------
+[DRAGONFANG]
+SellPrice = 750
+#-------------------------------
+[DRAGONSCALE]
+SellPrice = 750
+#-------------------------------
+[DUBIOUSDISC]
+SellPrice = 750
+#-------------------------------
+[DUSKBALL]
+SellPrice = 250
+#-------------------------------
+[DUSKSTONE]
+SellPrice = 750
+#-------------------------------
+[EJECTBUTTON]
+Price = 30000
+SellPrice = 7500
+#-------------------------------
+[EJECTPACK]
+Price = 30000
+SellPrice = 7500
+#-------------------------------
+[ELECTIRIZER]
+SellPrice = 750
+#-------------------------------
+[ELECTRICSEED]
+Price = 20000
+SellPrice = 5000
+#-------------------------------
+[ELIXIR]
+Price = 1500
+#-------------------------------
+[ENERGYPOWDER]
+SellPrice = 125
+#-------------------------------
+[ENERGYROOT]
+SellPrice = 300
+#-------------------------------
+[ENIGMABERRY]
+Price = 40
+#-------------------------------
+[ETHER]
+Price = 600
+#-------------------------------
+[EVERSTONE]
+SellPrice = 750
+#-------------------------------
+[EVIOLITE]
+Price = 50000
+SellPrice = 12500
+#-------------------------------
+[EXPCANDYL]
+Price = 1500
+#-------------------------------
+[EXPCANDYM]
+Price = 500
+#-------------------------------
+[EXPCANDYS]
+Price = 120
+#-------------------------------
+[EXPCANDYXL]
+Price = 5000
+#-------------------------------
+[EXPCANDYXS]
+Price = 10
+#-------------------------------
+[EXPERTBELT]
+Price = 30000
+SellPrice = 7500
+#-------------------------------
+[FIGYBERRY]
+Price = 40
+#-------------------------------
+[FIRESTONE]
+SellPrice = 750
+#-------------------------------
+[FLAMEORB]
+Price = 15000
+SellPrice = 3750
+#-------------------------------
+[FLOATSTONE]
+Price = 10000
+SellPrice = 2500
+#-------------------------------
+[FLUFFYTAIL]
+SellPrice = 75
+#-------------------------------
+[FOCUSBAND]
+Price = 10000
+SellPrice = 2500
+#-------------------------------
+[FOCUSSASH]
+Price = 50000
+SellPrice = 12500
+#-------------------------------
+[FRESHWATER]
+SellPrice = 50
+#-------------------------------
+[FULLHEAL]
+SellPrice = 100
+#-------------------------------
+[FULLRESTORE]
+SellPrice = 750
+#-------------------------------
+[GALARICACUFF]
+Price = 3000
+SellPrice = 750
+#-------------------------------
+[GALARICAWREATH]
+Price = 3000
+SellPrice = 750
+#-------------------------------
+[GANLONBERRY]
+Price = 40
+#-------------------------------
+[GENIUSFEATHER]
+Price = 150
+#-------------------------------
+[GENTLEMINT]
+Price = 20000
+SellPrice = 5000
+#-------------------------------
+[GRASSYSEED]
+Price = 20000
+SellPrice = 5000
+#-------------------------------
+[GREATBALL]
+SellPrice = 150
+#-------------------------------
+[GREENAPRICORN]
+Price = 100
+#-------------------------------
+[GREPABERRY]
+Price = 40
+#-------------------------------
+[GRIPCLAW]
+Price = 10000
+SellPrice = 2500
+#-------------------------------
+[GUARDSPEC]
+SellPrice = 375
+#-------------------------------
+[HABANBERRY]
+Price = 40
+#-------------------------------
+[GREPABERRY]
+Price = 40
+#-------------------------------
+[HARDSTONE]
+SellPrice = 750
+#-------------------------------
+[HASTYMINT]
+Price = 20000
+SellPrice = 5000
+#-------------------------------
+[HEALBALL]
+SellPrice = 75
+#-------------------------------
+[HEALPOWDER]
+SellPrice = 75
+#-------------------------------
+[HEALTHFEATHER]
+Price = 150
+#-------------------------------
+[HEATROCK]
+Price = 8000
+SellPrice = 2000
+#-------------------------------
+[HEAVYDUTYBOOTS]
+Price = 20000
+SellPrice = 5000
+#-------------------------------
+[HONDEWBERRY]
+Price = 40
+#-------------------------------
+[HONEY]
+Price = 450
+#-------------------------------
+[HPUP]
+SellPrice = 2500
+#-------------------------------
+[HYPERPOTION]
+SellPrice = 375
+#-------------------------------
+[IAPAPABERRY]
+Price = 40
+#-------------------------------
+[ICEHEAL]
+SellPrice = 50
+#-------------------------------
+[ICESTONE]
+SellPrice = 750
+#-------------------------------
+[ICYROCK]
+Price = 8000
+SellPrice = 2000
+#-------------------------------
+[IMPISHMINT]
+Price = 20000
+SellPrice = 5000
+#-------------------------------
+[IRON]
+SellPrice = 2500
+#-------------------------------
+[IRONBALL]
+Price = 20000
+SellPrice = 5000
+#-------------------------------
+[JABOCABERRY]
+Price = 40
+#-------------------------------
+[JOLLYMINT]
+Price = 20000
+SellPrice = 5000
+#-------------------------------
+[KASIBBERRY]
+Price = 40
+#-------------------------------
+[KEBIABERRY]
+Price = 40
+#-------------------------------
+[KEEBERRY]
+Price = 40
+#-------------------------------
+[KELPSYBERRY]
+Price = 40
+#-------------------------------
+[KINGSROCK]
+Price = 10000
+SellPrice = 2500
+#-------------------------------
+[LAGGINGTAIL]
+Price = 20000
+SellPrice = 5000
+#-------------------------------
+[LANSATBERRY]
+Price = 40
+#-------------------------------
+[LAXMINT]
+Price = 20000
+SellPrice = 5000
+#-------------------------------
+[LEAFSTONE]
+SellPrice = 750
+#-------------------------------
+[LEFTOVERS]
+Price = 20000
+SellPrice = 5000
+#-------------------------------
+[LEMONADE]
+SellPrice = 100
+#-------------------------------
+[LEPPABERRY]
+Price = 40
+#-------------------------------
+[LIECHIBERRY]
+Price = 40
+#-------------------------------
+[LIFEORB]
+Price = 50000
+SellPrice = 12500
+#-------------------------------
+[LIGHTBALL]
+Price = 500
+#-------------------------------
+[LIGHTCLAY]
+Price = 20000
+SellPrice = 5000
+#-------------------------------
+[LONELYMINT]
+Price = 20000
+SellPrice = 5000
+#-------------------------------
+[LUCKYEGG]
+Price = 5000
+#-------------------------------
+[LUMBERRY]
+Price = 40
+#-------------------------------
+[LUMINOUSMOSS]
+Price = 5000
+SellPrice = 1250
+#-------------------------------
+[LUMIOSEGALETTE]
+Price = 174
+#-------------------------------
+[LUXURYBALL]
+SellPrice = 750
+#-------------------------------
+[MAGMARIZER]
+SellPrice = 750
+#-------------------------------
+[MAGNET]
+SellPrice = 750
+#-------------------------------
+[MAGOBERRY]
+Price = 40
+#-------------------------------
+[MARANGABERRY]
+Price = 40
+#-------------------------------
+[MAXELIXIR]
+Price = 2250
+#-------------------------------
+[MAXETHER]
+Price = 1000
+#-------------------------------
+[MAXPOTION]
+SellPrice = 625
+#-------------------------------
+[MAXREVIVE]
+Price = 2000
+#-------------------------------
+[MENTALHERB]
+Price = 10000
+SellPrice = 2500
+#-------------------------------
+[METALCOAT]
+SellPrice = 750
+#-------------------------------
+[METRONOME]
+Price = 15000
+SellPrice = 3750
+#-------------------------------
+[MICLEBERRY]
+Price = 40
+#-------------------------------
+[MILDMINT]
+Price = 20000
+SellPrice = 5000
+#-------------------------------
+[MIRACLESEED]
+SellPrice = 750
+#-------------------------------
+[MISTYSEED]
+Price = 20000
+SellPrice = 5000
+#-------------------------------
+[MODESTMINT]
+Price = 20000
+SellPrice = 5000
+#-------------------------------
+[MOOMOOMILK]
+SellPrice = 150
+#-------------------------------
+[MOONSTONE]
+SellPrice = 750
+#-------------------------------
+[MUSCLEBAND]
+Price = 8000
+SellPrice = 2000
+#-------------------------------
+[MUSCLEFEATHER]
+Price = 150
+#-------------------------------
+[MYSTICWATER]
+SellPrice = 750
+#-------------------------------
+[NAIVEMINT]
+Price = 20000
+SellPrice = 5000
+#-------------------------------
+[NAUGHTYMINT]
+Price = 20000
+SellPrice = 5000
+#-------------------------------
+[NESTBALL]
+SellPrice = 250
+#-------------------------------
+[NETBALL]
+SellPrice = 250
+#-------------------------------
+[NEVERMELTICE]
+SellPrice = 750
+#-------------------------------
+[NORMALGEM]
+Price = 15000
+SellPrice = 3750
+#-------------------------------
+[OCCABERRY]
+Price = 40
+#-------------------------------
+[ODDKEYSTONE]
+Price = 1050
+#-------------------------------
+[ORANBERRY]
+Price = 40
+#-------------------------------
+[OVALSTONE]
+SellPrice = 500
+#-------------------------------
+[PARALYZEHEAL]
+SellPrice = 50
+#-------------------------------
+[PASSHOBERRY]
+Price = 40
+#-------------------------------
+[PAYAPABERRY]
+Price = 40
+#-------------------------------
+[PECHABERRY]
+Price = 40
+#-------------------------------
+[PERSIMBERRY]
+Price = 40
+#-------------------------------
+[PETAYABERRY]
+Price = 40
+#-------------------------------
+[PINKAPRICORN]
+Price = 100
+#-------------------------------
+[PINKNECTAR]
+Price = 300
+SellPrice = 75
+#-------------------------------
+[POISONBARB]
+SellPrice = 750
+#-------------------------------
+[POKEBALL]
+SellPrice = 50
+#-------------------------------
+[POKEDOLL]
+SellPrice = 75
+#-------------------------------
+[POKETOY]
+SellPrice = 75
+#-------------------------------
+[POMEGBERRY]
+Price = 40
+#-------------------------------
+[POTION]
+SellPrice = 50
+#-------------------------------
+[POWERANKLET]
+Price = 10000
+SellPrice = 2500
+#-------------------------------
+[POWERBAND]
+Price = 10000
+SellPrice = 2500
+#-------------------------------
+[POWERBELT]
+Price = 10000
+SellPrice = 2500
+#-------------------------------
+[POWERBRACER]
+Price = 10000
+SellPrice = 2500
+#-------------------------------
+[POWERHERB]
+Price = 30000
+SellPrice = 7500
+#-------------------------------
+[POWERLENS]
+Price = 10000
+SellPrice = 2500
+#-------------------------------
+[POWERWEIGHT]
+Price = 10000
+SellPrice = 2500
+#-------------------------------
+[PPMAX]
+SellPrice = 2500
+#-------------------------------
+[PPUP]
+SellPrice = 2500
+#-------------------------------
+[PREMIERBALL]
+SellPrice = 5
+#-------------------------------
+[PRISMSCALE]
+SellPrice = 750
+#-------------------------------
+[PROTECTIVEPADS]
+Price = 15000
+SellPrice = 3750
+#-------------------------------
+[PROTECTOR]
+SellPrice = 750
+#-------------------------------
+[PROTEIN]
+SellPrice = 2500
+#-------------------------------
+[PSYCHICSEED]
+Price = 20000
+SellPrice = 5000
+#-------------------------------
+[PURPLENECTAR]
+Price = 300
+SellPrice = 75
+#-------------------------------
+[QUALOTBERRY]
+Price = 40
+#-------------------------------
+[QUICKBALL]
+SellPrice = 250
+#-------------------------------
+[QUICKCLAW]
+Price = 8000
+SellPrice = 2000
+#-------------------------------
+[QUIETMINT]
+Price = 20000
+SellPrice = 5000
+#-------------------------------
+[RARECANDY]
+Price = 5000
+#-------------------------------
+[RASHMINT]
+Price = 20000
+SellPrice = 5000
+#-------------------------------
+[RAWSTBERRY]
+Price = 40
+#-------------------------------
+[RAZORCLAW]
+Price = 15000
+SellPrice = 3750
+#-------------------------------
+[RAZORFANG]
+Price = 15000
+SellPrice = 3750
+#-------------------------------
+[REAPERCLOTH]
+SellPrice = 750
+#-------------------------------
+[REDAPRICORN]
+Price = 100
+#-------------------------------
+[REDCARD]
+Price = 30000
+SellPrice = 7500
+#-------------------------------
+[REDNECTAR]
+Price = 300
+SellPrice = 75
+#-------------------------------
+[RELAXEDMINT]
+Price = 20000
+SellPrice = 5000
+#-------------------------------
+[REPEATBALL]
+SellPrice = 250
+#-------------------------------
+[RESISTFEATHER]
+Price = 150
+#-------------------------------
+[REVIVALHERB]
+SellPrice = 700
+#-------------------------------
+[REVIVE]
+SellPrice = 500
+#-------------------------------
+[RINDOBERRY]
+Price = 40
+#-------------------------------
+[RINGTARGET]
+Price = 10000
+SellPrice = 2500
+#-------------------------------
+[ROCKYHELMET]
+Price = 50000
+SellPrice = 12500
+#-------------------------------
+[ROOMSERVICE]
+Price = 20000
+SellPrice = 5000
+#-------------------------------
+[ROSELIBERRY]
+Price = 40
+#-------------------------------
+[ROWAPBERRY]
+Price = 40
+#-------------------------------
+[SACHET]
+SellPrice = 750
+#-------------------------------
+[SAFETYGOGGLES]
+Price = 20000
+SellPrice = 5000
+#-------------------------------
+[SALACBERRY]
+Price = 40
+#-------------------------------
+[SASSYMINT]
+Price = 20000
+SellPrice = 5000
+#-------------------------------
+[SCOPELENS]
+Price = 15000
+SellPrice = 3750
+#-------------------------------
+[SERIOUSMINT]
+Price = 20000
+SellPrice = 5000
+#-------------------------------
+[SHARPBEAK]
+SellPrice = 750
+#-------------------------------
+[SHEDSHELL]
+Price = 20000
+SellPrice = 5000
+#-------------------------------
+[SHELLBELL]
+Price = 20000
+SellPrice = 5000
+#-------------------------------
+[SHINYSTONE]
+SellPrice = 750
+#-------------------------------
+[SHUCABERRY]
+Price = 40
+#-------------------------------
+[SILKSCARF]
+SellPrice = 750
+#-------------------------------
+[SILVERPOWDER]
+SellPrice = 750
+#-------------------------------
+[SITRUSBERRY]
+Price = 40
+#-------------------------------
+[SMOKEBALL]
+Price = 15000
+SellPrice = 3750
+#-------------------------------
+[SMOOTHROCK]
+Price = 8000
+SellPrice = 2000
+#-------------------------------
+[SNOWBALL]
+Price = 5000
+SellPrice = 1250
+#-------------------------------
+[SODAPOP]
+SellPrice = 75
+#-------------------------------
+[SOFTSAND]
+SellPrice = 750
+#-------------------------------
+[SOOTHEBELL]
+Price = 5000
+SellPrice = 1250
+#-------------------------------
+[SPELLTAG]
+SellPrice = 750
+#-------------------------------
+[STARFBERRY]
+Price = 40
+#-------------------------------
+[STICKYBARB]
+Price = 10000
+SellPrice = 2500
+#-------------------------------
+[SUNSTONE]
+SellPrice = 750
+#-------------------------------
+[SUPERPOTION]
+SellPrice = 175
+#-------------------------------
+[SWEETAPPLE]
+SellPrice = 550
+#-------------------------------
+[SWIFTFEATHER]
+Price = 150
+#-------------------------------
+[TOMATOBERRY]
+Price = 40
+#-------------------------------
+[TANGABERRY]
+Price = 40
+#-------------------------------
+[TARTAPPLE]
+SellPrice = 550
+#-------------------------------
+[TERRAINEXTENDER]
+Price = 15000
+SellPrice = 3750
+#-------------------------------
+[THROATSPRAY]
+Price = 20000
+SellPrice = 5000
+#-------------------------------
+[THUNDERSTONE]
+SellPrice = 750
+#-------------------------------
+[TIMERBALL]
+SellPrice = 250
+#-------------------------------
+[TIMIDMINT]
+Price = 20000
+SellPrice = 5000
+#-------------------------------
+[TOXICORB]
+Price = 15000
+SellPrice = 3750
+#-------------------------------
+[TWISTEDSPOON]
+SellPrice = 750
+#-------------------------------
+[UPGRADE]
+SellPrice = 750
+#-------------------------------
+[ULTRABALL]
+SellPrice = 200
+#-------------------------------
+[UTILITYUMBRELLA]
+Price = 15000
+SellPrice = 3750
+#-------------------------------
+[WACANBERRY]
+Price = 40
+#-------------------------------
+[WATERSTONE]
+SellPrice = 750
+#-------------------------------
+[WEAKNESSPOLICY]
+Price = 50000
+SellPrice = 12500
+#-------------------------------
+[WHIPPEDDREAM]
+SellPrice = 750
+#-------------------------------
+[WHITEAPRICORN]
+Price = 100
+#-------------------------------
+[WHITEHERB]
+Price = 20000
+SellPrice = 5000
+#-------------------------------
+[WIDELENS]
+Price = 20000
+SellPrice = 5000
+#-------------------------------
+[WIKIBERRY]
+Price = 40
+#-------------------------------
+[WISEGLASSES]
+Price = 8000
+SellPrice = 2000
+#-------------------------------
+[XACCURACY]
+SellPrice = 250
+#-------------------------------
+[XATTACK]
+SellPrice = 250
+#-------------------------------
+[XDEFENSE]
+SellPrice = 250
+#-------------------------------
+[XSPATK]
+SellPrice = 250
+#-------------------------------
+[XSPDEF]
+SellPrice = 250
+#-------------------------------
+[XSPEED]
+SellPrice = 250
+#-------------------------------
+[YACHEBERRY]
+Price = 40
+#-------------------------------
+[YELLOWAPRICORN]
+Price = 100
+#-------------------------------
+[YELLOWNECTAR]
+Price = 300
+SellPrice = 75
+#-------------------------------
+[ZINC]
+SellPrice = 2500
+#-------------------------------
+[ZOOMLENS]
+Price = 10000
+SellPrice = 2500
