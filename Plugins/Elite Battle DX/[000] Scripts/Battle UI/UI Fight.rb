@@ -119,10 +119,13 @@ class FightWindowEBDX
 
     @buttonBitmap = pbBitmap(@path + @cmdImg)
 
-    lang = pbGetSelectedLanguage
-    typeBitmapPath = pbResolveBitmap("Graphics/EBDX/Pictures/UI/types_"+lang)
-    @typebitmap = typeBitmapPath ? pbBitmap(typeBitmapPath) : pbBitmap("Graphics/EBDX/Pictures/UI/types")
-    
+    @typebitmap = pbResolveBitmap(@path + @typImg)
+    if !@typebitmap
+      lang = pbGetSelectedLanguage
+      typeBitmapPath = pbResolveBitmap("Graphics/EBDX/Pictures/UI/types_"+lang)
+      @typebitmap = typeBitmapPath ? pbBitmap(typeBitmapPath) : pbBitmap("Graphics/EBDX/Pictures/UI/types")
+    end
+
     @catBitmap = pbBitmap(@path + @catImg)
 
     @background = Sprite.new(@viewport)
@@ -365,7 +368,7 @@ class FightWindowEBDX
   def dispose
     @buttonBitmap.dispose
     @catBitmap.dispose
-    @typeBitmap.dispose
+    @typeBitmap.dispose if @typeBitmap
     @background.dispose
     @megaButton.dispose
     @typeInd.dispose
