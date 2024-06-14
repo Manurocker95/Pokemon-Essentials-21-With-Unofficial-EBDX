@@ -118,12 +118,18 @@ class FightWindowEBDX
     self.applyMetrics
 
     @buttonBitmap = pbBitmap(@path + @cmdImg)
+    
+    lang = pbGetSelectedLanguage
+    typeBitmapPath = pbResolveBitmap("Graphics/EBDX/Pictures/UI/types_"+lang)
 
-    @typebitmap = pbBitmap(@path + @typImg)
+    if typeBitmapPath
+      @typebitmap = pbBitmap(typeBitmapPath)
+    else
+      @typebitmap = pbBitmap(@path + @typImg)
+    end    
+ 
     if !@typebitmap
-      lang = pbGetSelectedLanguage
-      typeBitmapPath = pbResolveBitmap("Graphics/EBDX/Pictures/UI/types_"+lang)
-      @typebitmap = typeBitmapPath ? pbBitmap(typeBitmapPath) : pbBitmap("Graphics/EBDX/Pictures/UI/types")
+      @typebitmap = pbBitmap("Graphics/EBDX/Pictures/UI/types")
     end
 
     @catBitmap = pbBitmap(@path + @catImg)
