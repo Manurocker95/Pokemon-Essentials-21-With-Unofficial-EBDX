@@ -119,7 +119,7 @@ class FightWindowEBDX
 
     @buttonBitmap = pbBitmap(@path + @cmdImg)
 
-    @typebitmap = pbResolveBitmap(@path + @typImg)
+    @typebitmap = pbBitmap(@path + @typImg)
     if !@typebitmap
       lang = pbGetSelectedLanguage
       typeBitmapPath = pbResolveBitmap("Graphics/EBDX/Pictures/UI/types_"+lang)
