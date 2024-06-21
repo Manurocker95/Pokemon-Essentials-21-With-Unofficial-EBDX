@@ -250,5 +250,10 @@ module GameData
 end
 #------------------------------------------------------------------------------------
 def pbGetSelectedLanguage
+  return "english" if Settings::LANGUAGES.length == 0 || 
+                    $PokemonSystem.language < 0 || 
+                    Settings::LANGUAGES.length < $PokemonSystem.language || 
+                    !Settings::LANGUAGES[$PokemonSystem.language]
+
   return Settings::LANGUAGES[$PokemonSystem.language][1]
 end  
