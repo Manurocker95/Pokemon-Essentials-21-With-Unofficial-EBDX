@@ -542,10 +542,10 @@ class AdvancedWorldTournament
   end
 
   def wait(frames = 1)
-    mult = Graphics.frame_rate/EliteBattle::DEFAULT_FRAMERATE 
+    mult = Graphics.frame_rate/PWTSettings::PWT_DEFAULT_FRAMERATE 
     frames = frames * mult
 
-    if EliteBattle::USE_DELTA_TIME_HOTFIX
+    if PWTSettings::PWT_USE_DELTA_TIME
       if frames <= 0
         self.update
         Graphics.update
@@ -557,6 +557,7 @@ class AdvancedWorldTournament
       pbWaitWithFrames(frames)
     end
   end
+
   def pbGetFramesClampedDuration(frames = 1)
     duration = frames.to_f / Graphics.frame_rate
     duration = 0.01 if duration <= 0

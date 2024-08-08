@@ -14,6 +14,10 @@ PWT_LOBBY_EVENT = 6
 PWT_FANFARE_EVENT = 38
 # If marked as true, it will apply a multiplier based on the player's current win streak. Defeault to false.
 PWT_STREAK_MULT = false
+# If marked as true, it will use DeltaTime, otherwise, it will use the old frame system
+PWT_USE_DELTA_TIME = false
+# Target framerate. By default it's usually 60 fps with MKXP-Z.
+PWT_DEFAULT_FRAMERATE = 60
 end
 
 module GameData
