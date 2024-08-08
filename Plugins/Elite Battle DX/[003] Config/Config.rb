@@ -81,7 +81,7 @@ module EliteBattle
   FORCE_EBDX_ALTITUDE = true
 
   #if set to false, the original "frame system" is used instead of the new deltaTime. The "original" has a hotfix as well based on waiting frames.
-  USE_DELTA_TIME_HOTFIX = true
+  USE_DELTA_TIME_HOTFIX = false
 
   #Target framerate to check the current Graphics.frame_rate. Duration for pbWait is calculated by frames / current fps and the multiplier by current fps / target rate. 60/60 = 1 so mult doesn't apply.
   DEFAULT_FRAMERATE = 60
