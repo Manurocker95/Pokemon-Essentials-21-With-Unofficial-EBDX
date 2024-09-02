@@ -250,7 +250,7 @@ class FightWindowEBDX
       pbSetSmallFont(@button["#{i}"].bitmap)
 
       pbDrawOutlineText(@button["#{i}"].bitmap, 198, 10, 196, 42,"#{movedata.name}", Color.white, baseColor, 1)
-      pp = "#{@moves[i].pp}/#{movedata.total_pp}"
+      pp = "#{@moves[i].pp}/#{@moves[i].total_pp}"
       pbDrawOutlineText(@button["#{i}"].bitmap, 0, 48, 191, 26, pp, Color.white, baseColor, 2)
       pbSetSystemFont(@button["#{i}"].bitmap)
       selectedMoveNameYPos = 18
