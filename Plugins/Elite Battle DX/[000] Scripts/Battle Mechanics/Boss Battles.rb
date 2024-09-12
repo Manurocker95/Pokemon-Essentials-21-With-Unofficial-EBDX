@@ -62,7 +62,7 @@ module EliteBattle
     return handled[0] if handled[0] != nil
     # Skip battle if the player has no able Pokémon, or if holding Ctrl in Debug mode
     if $player.able_pokemon_count == 0 || ($DEBUG && Input.press?(Input::CTRL))
-      pbMessage(_INTL("SKIPPING BATTLE...")) if $player.pokemonCount>0
+      pbMessage(_INTL("SKIPPING BATTLE...")) if $player.pokemon_count>0
       pbSet(outcomeVar, 1)   # Treat it as a win
       $game_temp.clear_battle_rules
       $PokemonGlobal.nextBattleBGM       = nil
