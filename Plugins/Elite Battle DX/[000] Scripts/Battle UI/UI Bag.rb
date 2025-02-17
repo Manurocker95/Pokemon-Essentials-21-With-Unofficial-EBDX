@@ -510,7 +510,7 @@ class BagWindowEBDX
       @ret = nil
       return false
     else
-      @index = 0 if @index == 4 && EliteBattle.GetItemID(GameData::Item.get(@lastUsed).id) == 0
+      @index = 0 if @index == 4 && (@lastUsed == 0 || EliteBattle.GetItemID(GameData::Item.get(@lastUsed).id) == 0)
       return true
     end
   end

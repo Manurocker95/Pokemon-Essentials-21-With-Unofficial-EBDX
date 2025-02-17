@@ -1381,7 +1381,7 @@ class ClassicVSSequence
     end
   end
   def wait(frames = 1)
-    mult = Graphics.frame_rate/EliteBattle::DEFAULT_FRAMERATE 
+    mult = Graphics.frame_rate/$EliteBattleTargetFramerate
     frames = frames * mult
 
     if EliteBattle::USE_DELTA_TIME_HOTFIX

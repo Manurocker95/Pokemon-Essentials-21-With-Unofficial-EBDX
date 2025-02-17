@@ -193,7 +193,7 @@ class Battle::Scene
     vector = EliteBattle.get_vector(:MAIN, @battle)
     @vector.force
     @vector.set(vector)
-    mult = Graphics.frame_rate/EliteBattle::DEFAULT_FRAMERATE 
+    mult = Graphics.frame_rate/$EliteBattleTargetFramerate
     @vector.inc = 0.1 * mult
     # fade necessary sprites into scene
     for i in 0...22.delta_add

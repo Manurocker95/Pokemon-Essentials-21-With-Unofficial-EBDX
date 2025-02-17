@@ -1,3 +1,4 @@
+$EliteBattleTargetFramerate = 60
 #===============================================================================
 #  Main Utility Module for Elite Battle: DX
 #-------------------------------------------------------------------------------
@@ -40,6 +41,7 @@ module EliteBattle
   @messageDarkColor = Color.white
   @messageDarkShadow = Color.new(32, 32, 32)
   # additional config vars
+  $EliteBattleTargetFramerate = 60 if $EliteBattleTargetFramerate <= 0
   @setBoss = false
   @logger = ErrorLogger.new("errorlogEBDX.txt")
   # cache move animations at game load
@@ -642,7 +644,7 @@ module EliteBattle
   #-----------------------------------------------------------------------------
   def self.outdoor_map?
     return GameData::MapMetadata.exists?($game_map.map_id) && GameData::MapMetadata.get($game_map.map_id).outdoor_map
-  end
+  end 
   #-----------------------------------------------------------------------------
 end
 #-------------------------------------------------------------------------------

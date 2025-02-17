@@ -123,7 +123,7 @@ class Battle::Scene
   #-----------------------------------------------------------------------------
   def wait(frames = 1, align = false, &block)
     frames = Graphics.frame_rate if frames < 1 && frames > 0
-    mult = Graphics.frame_rate/EliteBattle::DEFAULT_FRAMERATE 
+    mult = Graphics.frame_rate/$EliteBattleTargetFramerate
     frames = frames * mult
 
     if EliteBattle::USE_DELTA_TIME_HOTFIX
